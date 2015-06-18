@@ -1,7 +1,26 @@
 
-// Core Mixins ------------ //
+// Global Mixins
+// 
+// Table of Contents
+//
+// 1)  Clearfix
+// 2)  Peek-a-boo
+// 3)  Typography
+// 4)  Centered Content Block
+// 5)  Inline Lists
+// 6)  Positioning
+// 7)  Box Sizing
+// 8)  Box Shadow
+// 9)  Simple Borders
+// 10) Border Radius
+// 11) Gradients
+// 12) CSS3 Transition
+// 13) CSS3 Transformations
+// 14) Placeholder Text
+// 15) Opacity
+// ========================================================================== //
 
-// Clearfix
+// 1. Clearfix ------------------- //
 
 @mixin clearfix() {
   &:before,
@@ -14,7 +33,7 @@
   }
 }
 
-// Peek-a-boo
+// 2. Peek-a-boo ------------------- //
 
 @mixin show($display: block) {
   display: $display;
@@ -25,7 +44,7 @@
   visibility: hidden !important;
 }
 
-// Typography
+// 3. Typography ------------------- //
 
 @mixin uppercase { text-transform: uppercase; }
 
@@ -39,7 +58,7 @@
 
 @mixin outline { outline: none; }
 
-// Centered Content Block
+// 4. Centered Content Block ------------------- //
 
 @mixin centered-content-block () {
   margin-left: auto;
@@ -47,7 +66,7 @@
   display: table;
 }
 
-// Inline Lists
+// 5. Inline Lists ------------------- //
 
 @mixin list-inline() {
   margin: 0px;
@@ -71,7 +90,7 @@
   }
 }
 
-// Fixed Positioning
+// 6. Positioning ------------------- //
 
 @mixin fx-position ($top, $right, $bottom, $left, $z-index) {
   position: fixed;
@@ -82,8 +101,6 @@
   z-index: $z-index;
 }
 
-// Absolute Positioning
-
 @mixin ab-position ($top, $right, $bottom, $left, $z-index) {
   position: absolute;
   top: $top;
@@ -93,14 +110,12 @@
   z-index: $z-index;
 }
 
-// Relative Positioning
-
 @mixin rel-position ($z-index) {
   position: relative;
   z-index: $z-index;
 }
 
-// Box Sizing
+// 7. Box Sizing ------------------- //
 
 @mixin box-sizing($box-model) {
   -webkit-box-sizing: $box-model;
@@ -108,14 +123,14 @@
           box-sizing: $box-model;
 }
 
-// Box-Shadow
+// 8. Box-Shadow ------------------- //
 
 @mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow;
           box-shadow: $shadow;
 }
 
-// Borders
+// 9. Simple Borders ------------------- //
 
 @mixin border($width, $style, $color) {
   border-width: $width;
@@ -123,7 +138,7 @@
   border-color: $color;
 }
 
-// Border Radius
+// 10. Border Radius ------------------- //
 
 @mixin border-radius($radius...) {
   -webkit-border-radius: $radius;
@@ -165,7 +180,7 @@
           background-clip: padding-box;
 }
 
-// Gradients
+// 11. Gradients ------------------- //
 
 // Linear Gradient
 
@@ -201,7 +216,7 @@
   -ms-filter:       progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
-// CSS3 Transitions
+// 12. Transition ------------------- //
 
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
@@ -211,7 +226,7 @@
     transition: $transition-property $transition-time $method;
 }
 
-// CSS3 Transformations
+// 13. Transformations ------------------- //
 
 @mixin scale($ratio...) {
   -webkit-transform: scale($ratio);
@@ -292,7 +307,7 @@
   transform-origin: $origin;
 }
 
-// Placeholder text
+// 14. Placeholder Text ------------------- //
 
 @mixin placeholder($color: $base-input-border-color) {
     // Firefox
@@ -304,7 +319,7 @@
   &::-webkit-input-placeholder { color: darken($color, 20%); } // Safari and Chrome
 }
 
-// Opacity
+// 15. Opacity ------------------- //
 
 @mixin opacity($opacity) {
   opacity: $opacity;
