@@ -4,7 +4,7 @@ Repo for ADThemes One Framework Files
 These are specific to ADThemes and Sites. 
 
 # Setup
-Site Specific CSS goes in the _site-layout.scss partial
+Site specific CSS goes in the _site-layout.scss partial
 
 Use the @import rule to import the different partials you would like to use from the framework in the layout.scss file located in webroot, the framework uses fontawesome in some of the navigational elements so be sure to include it with the @import rule in the same file.
 
