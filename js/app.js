@@ -15,20 +15,20 @@ $(document).ready(function() {
     $('li:not(.has-columns) ul.level-2 > li:has(ul) > span').css('display', 'block');
 
   } else {
-		console.log('using jquery fade for menus');
-		// css('visibility', 'visible') to undo the visibility hide/show stuff in CSS (to support IE8 display fading)
-		$('.primary-nav > ul > li > ul').css('visibility', 'visible').hide();
-		$('.primary-nav > ul > li:has(ul)').hover(
-			function () {
-				//show its submenu
-				$(this).find('> ul').fadeIn(100);
-			},
-			function () {
-				//hide its submenu
-				$(this).find('> ul').fadeOut(300);
-			}
-		);
-	}
+    console.log('using jquery fade for menus');
+    // css('visibility', 'visible') to undo the visibility hide/show stuff in CSS (to support IE8 display fading)
+    $('.primary-nav > ul > li > ul').css('visibility', 'visible').hide();
+    $('.primary-nav > ul > li:has(ul)').hover(
+      function () {
+        //show its submenu
+        $(this).find('> ul').fadeIn(100);
+      },
+      function () {
+        //hide its submenu
+        $(this).find('> ul').fadeOut(300);
+      }
+    );
+  }
 
   $('li.column-2 > a').removeAttr('href').addClass("column-title");
   $('li.column-3 > a').removeAttr('href').addClass("column-title");
