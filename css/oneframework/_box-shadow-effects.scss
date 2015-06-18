@@ -1,0 +1,152 @@
+
+/* Image Effects / Box Shadow */
+// bs = box shadow
+// Usage: bs-effect + effect i.e. bs-effect bs-1
+
+
+$base-bs-color: #000;
+
+@mixin bs-effect($position) {
+  position: $position;
+}
+
+// Effect 1 ---------------- //
+
+.bs-1 {
+  @include box-shadow(0 10px 6px -6px #777);
+}
+
+// Effect 2 ---------------- //
+
+.bs-2 {
+  @include bs-effect(relative);
+}
+
+.bs-2:before, .bs-2:after {
+  background: $base-bs-color;
+  width: 50%;
+  max-width:300px;
+  content: "";
+  @include ab-position(80%, auto, 15px, 10px, -1);
+  @include box-shadow(0 15px 10px $base-bs-color);
+  @include rotate(-3deg);
+}
+
+.bs-2:after {
+  @include rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+// Effect 3 ---------------- //
+
+.bs-3 {
+  @include bs-effect(relative);
+}
+
+.bs-3:before {
+  background: $base-bs-color;
+  width: 50%;
+  max-width:300px;
+  content: "";
+  @include ab-position(80%, auto, 15px, 10px, -1);
+  @include box-shadow(0 15px 10px $base-bs-color);
+  @include rotate(-3deg);
+}
+
+// Effect 4 ---------------- //
+
+.bs-4 {
+  @include bs-effect(relative);
+}
+
+.bs-4:after {
+  background: $base-bs-color;
+  width: 50%;
+  max-width:300px;
+  content: "";
+  @include ab-position(80%, 10px, 15px, auto, -1);
+  @include box-shadow(0 15px 10px $base-bs-color);
+  @include rotate(3deg);
+}
+
+// Effect 5 ---------------- //
+
+.bs-5 {
+  @include bs-effect(relative);
+}
+
+.bs-5:after {
+  width: 90%;
+  height: 10%;
+  content: ""; 
+  @include ab-position(auto, 5%, 0px, 5%, -1);
+  @include box-shadow(0 0 40px rgba(0,0,0,0.8));
+  @include border-radius(100%);
+}
+
+// Effect 6 ---------------- //
+
+.bs-6 { 
+  @include bs-effect(relative);
+}
+
+.bs-6:before {
+  content:"";
+  border-width: 0 30px 30px 0; 
+  border-style: solid;
+  border-color: #fff #fff #e7e7e7 #e7e7e7; 
+  display:block; 
+  @include ab-position(-1px, -1px, auto, auto, 3);
+  @include box-shadow(0 1px 0px rgba(0,0,0,0.05), -1px 1px 1px rgba(0,0,0,0.15));
+}
+
+// Effect 7 ---------------- //
+
+.bs-7 {
+  @include bs-effect(relative);
+  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+}
+
+.bs-7:before, .bs-7:after {
+  content:"";
+  @include border-radius(100px / 10px);
+  @include ab-position(0px, 10px, 0px, 10px, -1);
+  @include box-shadow(0 0 20px rgba(0,0,0,0.8));
+}
+
+.bs-7:after {
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+     -moz-transform:skew(8deg) rotate(3deg);
+      -ms-transform:skew(8deg) rotate(3deg);
+       -o-transform:skew(8deg) rotate(3deg);
+          transform:skew(8deg) rotate(3deg);
+}
+
+// Effect 8 ---------------- //
+
+.bs-8 {
+  @include bs-effect(relative);
+  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+}
+
+.bs-8:before, .bs-8:after {
+  content:"";
+  @include border-radius(100px / 10px);
+  @include ab-position(10px, 0px, 10px, 0px, -1);
+  @include box-shadow(0 0 20px rgba(0,0,0,0.8));
+}
+
+.bs-8:after {
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+     -moz-transform:skew(8deg) rotate(3deg);
+      -ms-transform:skew(8deg) rotate(3deg);
+       -o-transform:skew(8deg) rotate(3deg);
+          transform:skew(8deg) rotate(3deg);
+}
+
+

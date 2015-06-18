@@ -1,0 +1,413 @@
+
+/* Button Styles */
+
+// Define Button Build Types 
+// Decide which styles to include in final css build
+$base-btn-flat-build: false;
+$base-btn-rounded-build: false;
+$base-btn-pill-build: false;
+$base-btn-border-build: false;
+$base-btn-3d-build: false;
+
+// To exclude a button style, change build to false
+@each $base-btn-style in $base-btn-styles {
+  @if $base-btn-style == 'flat' {
+      $base-btn-flat-build: true;
+  }
+  @else if $base-btn-style == 'rounded' {
+      $base-btn-rounded-build: true;
+  }
+  @else if $base-btn-style == 'pill' {
+      $base-btn-pill-build: true;
+  }
+  @else if $base-btn-style == 'border' {
+      $base-btn-border-build: true;
+  }
+	@else if $base-btn-style == 'white-border' {
+      $base-btn-white-border-build: true;
+  }
+  @else if $base-btn-style == '3d' {
+      $base-btn-3d-build: true;
+  }
+}
+
+
+//Button Sizes
+$base-btn-fs-small:  inherit;
+$base-btn-fs-medium: inherit;
+$base-btn-fs-large:  inherit;
+$base-btn-fs-jumbo:  inherit;
+@if $base-btn-font-size != inherit {
+	$base-btn-fs-small:  $base-btn-font-size - 4;
+	$base-btn-fs-medium: $base-btn-font-size - 2;
+	$base-btn-fs-large:  $base-btn-font-size + 2;
+	$base-btn-fs-jumbo:  $base-btn-font-size + 4;
+} 
+
+// Base Button Build
+#{$base-btn-class} {
+	background-image: linear-gradient(top, lighten($base-btn-color, 5%), darken($base-btn-color, 5%));
+	background-color: $base-btn-color;
+	height: $base-btn-height;
+	margin: 0 0 5px;
+	padding: 0 ($base-btn-height * .8);
+	color: $base-btn-font-color;
+	font-family: $base-btn-font-family;
+	font-weight: $base-btn-font-weight;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	line-height: $base-btn-height;
+	border: 1px solid darken($base-btn-color, 10%);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, .5) inset, 0px 1px 2px rgba(0, 0, 0, .15);
+
+	&:hover, &:focus, &:active, &.is-active, &.active {
+		text-decoration: none;
+	}
+
+	&:hover, &:focus {
+		background-image: linear-gradient(top, lighten($base-btn-color, 10%), darken($base-btn-color, 7%));
+		background-color: darken($base-btn-color, 5%);
+		color: $base-btn-font-color;
+	}
+
+	&:active, &.is-active, &.active {
+		background-color: darken($base-btn-color, 15%);
+		color: $base-btn-font-color;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+// Additional Height Needed for Form Buttons
+input#{$base-btn-class}, button#{$base-btn-class} {
+  height: $base-btn-height + 2;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+// Block Button
+#{$base-btn-class}-block {
+  width: 100%;
+  display: block;
+}
+
+// Flat Button Build
+@if $base-btn-flat-build {
+  #{$base-btn-class}-flat {
+    $base-btn-accent-bg-color: $base-btn-color;
+    $base-btn-accent-font-color: $base-btn-font-color;
+    background-color: $base-btn-accent-bg-color;
+    border: none;
+    box-shadow: none;
+    @include transition(all, 0.3s, ease);
+
+    &:hover, &:focus {
+      background-color: darken($base-btn-accent-bg-color, 5%);
+      color: $base-btn-accent-font-color;
+      box-shadow: none;
+    }
+
+    &:active, &.is-active, &.active {
+      background-color: darken($base-btn-accent-bg-color, 15%);
+      color: $base-btn-accent-font-color;
+      box-shadow: none;
+    }
+
+    &.disabled {
+      box-shadow: none;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+// Border Button Build
+@if $base-btn-flat-build {
+  #{$base-btn-class}-border {
+		$base-btn-accent-bg-color: $base-btn-color;
+    $base-btn-accent-font-color: $base-btn-font-color;
+    background: none;
+    color: $base-btn-accent-font-color;
+		line-height: ceil($base-btn-height - 4);
+    box-shadow: none;
+    @include transition(all, 0.3s, ease);
+    border: 2px solid $base-btn-accent-bg-color;
+
+    &:hover, &:focus {
+      background-color: $base-btn-accent-bg-color;
+      box-shadow: none;
+      border: 2px solid $base-btn-accent-bg-color;
+    }
+
+    &:active, &.is-active, &.active {
+      background-color: darken($base-btn-accent-bg-color, 15%);
+      box-shadow: none;
+      border: 2px solid darken($base-btn-accent-bg-color, 15%);
+    }
+
+    &.disabled {
+      box-shadow: none;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+// White Border Button Build
+@if $base-btn-flat-build {
+  #{$base-btn-class}-white-border {
+    background: none;
+    color: $white;
+		line-height: ceil($base-btn-height - 4);
+    box-shadow: none;
+    @include transition(all, 0.3s, ease);
+    border: 2px solid $white;
+
+    &:hover, &:focus {
+      background-color: $white;
+			color: $base-btn-font-color;
+      box-shadow: none;
+      border: 2px solid $white;
+    }
+
+    &:active, &.is-active, &.active {
+      background-color: darken($white, 2%);
+			color: darken($base-btn-color, 50%);
+      box-shadow: none;
+      border: 2px solid darken($white, 2%);
+    }
+
+    &.disabled {
+      box-shadow: none;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+// 3D Button Build
+@if $base-btn-3d-build {
+  #{$base-btn-class}-3d {
+    $base-btn-accent-bg-color: $base-btn-color;
+    $base-btn-accent-font-color: $base-btn-font-color;
+    background-image: linear-gradient(top, lighten($base-btn-accent-bg-color, 2%), darken($base-btn-accent-bg-color, 2%));
+    background-color: $base-btn-accent-bg-color;
+    margin-bottom: 15px;
+    color: $base-btn-accent-font-color;
+    position: relative;
+    top: 0px;
+    @include transition(all, 0.3s, ease);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 7px 0px darken($base-btn-accent-bg-color, 20%), 0px 8px 3px rgba(0, 0, 0, .2);
+    border: 1px solid darken($base-btn-accent-bg-color, 5%);
+
+    &:hover, &:focus {
+      background-image: linear-gradient(top, lighten($base-btn-accent-bg-color, 5%), darken($base-btn-accent-bg-color, 5%));
+      background-color: darken($base-btn-accent-bg-color, 5%);
+      color: $base-btn-accent-font-color;
+      box-shadow: 0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 7px 0px darken($base-btn-accent-bg-color, 20%), 0px 8px 3px rgba(0, 0, 0, .2);
+    }
+
+    &:active, &.is-active, &.active {
+      background-image: linear-gradient(top, darken($base-btn-accent-bg-color, 2%), lighten($base-btn-accent-bg-color, 2%));
+      background-color: darken($base-btn-accent-bg-color, 15%);
+      color: $base-btn-accent-font-color;
+      top: 5px;
+      box-shadow: 0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 2px 0px darken($base-btn-accent-bg-color, 20%), 0px 3px 3px rgba(0, 0, 0, .2);
+      border: 1px solid darken($base-btn-accent-bg-color, 5%);
+    }
+
+    &.disabled {
+      box-shadow: none;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+// Set button shapes for rounded and pill
+@each $base-btn-style in $base-btn-styles {
+	// .btn-rounded or .btn-pill
+  #{$base-btn-class}-#{$base-btn-style} {
+		@if $base-btn-style == 'rounded' {
+    	border-radius: 3px;
+    }
+		
+		@else if $base-btn-style == 'pill' {
+    	border-radius: 50px;
+    }
+  }
+}
+
+// Get the Name & Color for Buttons
+// Defined in variables partial line 109
+@each $base-btn-accent-color in $base-btn-accent-colors {
+	$base-btn-accent-name: nth($base-btn-accent-color, 1);
+	$base-btn-accent-bg-color: nth($base-btn-accent-color, 2);
+	$base-btn-accent-font-color: nth($base-btn-accent-color, 3);
+
+	#{$base-btn-class}-#{$base-btn-accent-name} {
+		background-image: linear-gradient(top, lighten($base-btn-accent-bg-color, 5%), darken($base-btn-accent-bg-color, 5%));
+		background-color: $base-btn-accent-bg-color;
+		color: $base-btn-accent-font-color;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, .5) inset, 0px 1px 2px rgba(0, 0, 0, .15);
+    border-color: darken($base-btn-accent-bg-color, 10%);
+
+
+    &:hover, &:focus {
+      background-image: linear-gradient(top, lighten($base-btn-accent-bg-color, 10%), darken($base-btn-accent-bg-color, 5%));
+      background-color: darken($base-btn-accent-bg-color, 5%);
+      color: $base-btn-accent-font-color;
+    }
+
+    &:active, &.is-active, &.active {
+      background-color: darken($base-btn-accent-bg-color, 15%);
+      color: $base-btn-accent-font-color;
+    }
+	}
+
+	@if $base-btn-flat-build {
+    // .btn-flat-primary .btn-flat-secondary etc.
+    #{$base-btn-class}-flat-#{$base-btn-accent-name} {
+      background-color: $base-btn-accent-bg-color;
+      color: $base-btn-accent-font-color;
+      @include transition(all, 0.3s, ease);
+      box-shadow: none;
+      border: none;
+
+      &:hover, &:focus {
+        background-color: darken($base-btn-accent-bg-color, 5%);
+        color: $base-btn-accent-font-color;
+      }
+
+      &:active, &.is-active, &.active {
+        background-color: darken($base-btn-accent-bg-color, 15%);
+        color: $base-btn-accent-font-color;
+        box-shadow: none;
+      }
+
+      &.disabled {
+      	box-shadow: none;
+        -webkit-appearance: none;
+      }
+    }
+  }
+
+	@if $base-btn-border-build {
+		// .btn-border-primary .btn-border-secondary etc.
+    #{$base-btn-class}-border-#{$base-btn-accent-name} {
+    	background: none;
+      color: $base-btn-accent-bg-color;
+			line-height: ceil($base-btn-height - 4);
+      @include transition(all, 0.3s, ease);
+      box-shadow: none;
+      border: 2px solid $base-btn-accent-bg-color;
+      
+      &:hover, &:focus {
+				background-color: $base-btn-accent-bg-color;
+				color: $base-btn-accent-font-color;
+				box-shadow: none;
+				border: 2px solid $base-btn-accent-bg-color;
+      }
+
+      &:active, &.is-active, &.active {
+				background-color: darken($base-btn-accent-bg-color, 15%);
+				color: $base-btn-accent-font-color;
+				box-shadow: none;
+				border: 2px solid darken($base-btn-accent-bg-color, 15%);
+      }
+
+      &.disabled {
+	      box-shadow: none;
+	      -webkit-appearance: none;
+      }
+    }
+  }
+
+  // 3D Button With Accents
+  @if $base-btn-3d-build {
+    // .btn-3d-primary .btn-3d-secondary etc.
+    #{$base-btn-class}-3d-#{$base-btn-accent-name} {
+      background-image: linear-gradient(top, lighten($base-btn-accent-bg-color, 2%), darken($base-btn-accent-bg-color, 2%));
+      background-color: $base-btn-accent-bg-color;
+      color: $base-btn-accent-font-color;
+      position: relative;
+      top: 0px;
+      @include transition(all, 0.3s, ease);
+      box-shadow: 0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 7px 0px darken($base-btn-accent-bg-color, 10%), 0px 8px 3px rgba(0, 0, 0, .30);
+      border: 1px solid darken($base-btn-accent-bg-color, 10%);
+
+      &:hover, &:focus {
+        background-image: linear-gradient(top, lighten($base-btn-accent-bg-color, 8%), darken($base-btn-accent-bg-color, 1%));
+        background-color: darken($base-btn-accent-bg-color, 5%);
+        color: $base-btn-accent-font-color;
+        box-shadow: 0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 7px 0px darken($base-btn-accent-bg-color, 12%), 0px 8px 3px rgba(0, 0, 0, .30);
+      }
+
+      &:active, &.is-active, &.active {
+        background-image: linear-gradient(top,  darken($base-btn-accent-bg-color, 2%), lighten($base-btn-accent-bg-color, 2%));
+        background-color: darken($base-btn-accent-bg-color, 5%);
+        color: $base-btn-accent-font-color;
+        top: 5px;
+        box-shadow: 0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 2px 0px darken($base-btn-accent-bg-color, 10%), 0px 3px 3px rgba(0, 0, 0, .30);
+        border: 1px solid darken($base-btn-accent-bg-color, 5%);
+      }
+
+      &.disabled {
+        box-shadow: none;
+        -webkit-appearance: none;
+      }
+    }
+  }
+}
+
+// Button Sizes 
+@each $base-btn-size in $base-btn-sizes {
+  // .btn-large .btn-medium .btn-small
+  #{$base-btn-class}-#{$base-btn-size} {
+    @if $base-btn-size == 'jumbo' {
+      height: $base-btn-height * 1.6;
+      padding: 0px ($base-btn-height * 1.6) * .8;
+      font-size: $base-btn-fs-jumbo;
+      line-height: $base-btn-height * 1.6;
+    }
+
+    @if $base-btn-size == 'large' {
+      height: $base-btn-height * 1.2;
+      padding: 0px ($base-btn-height * 1.2) * .8;
+      font-size: $base-btn-fs-large;
+      line-height: $base-btn-height * 1.2;
+    }
+
+    @if $base-btn-size == 'medium' {
+      height: $base-btn-height * .8;
+      padding: 0px ($base-btn-height * .8) * .8;
+      font-size: $base-btn-fs-medium;
+      line-height: $base-btn-height * .8;
+    }
+
+    @if $base-btn-size == 'small' {
+      height: $base-btn-height * .7;
+      padding: 0px ($base-btn-height * .75) * .8;
+      font-size: $base-btn-fs-small;
+      line-height: $base-btn-height * .7;
+    }
+  }
+
+  // Additional Height needed for Form Buttons
+  input#{$base-btn-class}-#{$base-btn-size}, button#{$base-btn-class}-#{$base-btn-size} {
+    @if $base-btn-size == 'jumbo' {
+      height: ($base-btn-height * 1.6) + 2;
+    }
+
+    @if $base-btn-size == 'large' {
+      height: ($base-btn-height * 1.2) + 2;
+    }
+
+    @if $base-btn-size == 'medium' {
+      height: ($base-btn-height * .8) + 2;
+    }
+
+    @if $base-btn-size == 'small' {
+      height: ($base-btn-height * .7) + 2;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+
+/* The Grid
+========================================================================== */
+
+// Default Grid Settings
+
+$base-grid-max-width: 1200px;
+$base-grid-columns: 12;
+$base-grid-gutter: 30px;
+
+// Default Media Queries
+
+$base-screen-xs: 480px;
+$base-screen-sm: 768px;
+$base-screen-md: 1000px;
+$base-screen-lg: 1200px;
+
+// Set Max Screen Width for Media Queries
+
+$base-screen-xs-max: ($base-screen-xs - 1) !default;
+$base-screen-sm-max: ($base-screen-sm - 1) !default;
+$base-screen-md-max: ($base-screen-md - 1) !default;
+$base-screen-lg-max: ($base-screen-lg - 1) !default;
+
+// Grid Container Settings
+
+$base-container-sm: (738px + $base-grid-gutter) !default;
+$grid-sm : $base-container-sm !default;
+
+$base-container-md: (970px + $base-grid-gutter) !default;
+$grid-md : $base-container-md !default;
+
+$base-container-lg: (1170px + $base-grid-gutter) !default;
+$grid-lg : $base-container-lg !default;
+
+// Setup the Grid
+

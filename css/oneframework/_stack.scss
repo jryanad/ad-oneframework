@@ -1,0 +1,72 @@
+
+/* Stack
+========================================================================== */
+
+/* Set box-sizing globally to handle padding and border widths */
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+body {
+	background-color: $base-body-bg-color;
+	font-family: $base-font;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	color: $base-font-color;
+	line-height: $base-line-height;
+}
+
+a {
+	color: $primary-accent-color;
+	@include no-decoration;
+	@include outline;
+	&:hover,
+	&:focus {
+		color: lighten($primary-accent-color, 10%);
+	}
+}
+
+hr {
+	background: $default-color;
+	height: 1px;
+	margin: ceil($base-vertical-margin * 5) 0px;
+	border: none;
+	@include box-sizing(content-box);
+}
+
+*::-moz-selection { background: $primary-accent-color; color: $white; }
+*::selection { background: $primary-accent-color; color: $white; }
+
+
+/* Sizing Classes -------------*/
+
+/* Verticals  bvm = base-vertical-margin, bvp = base-vertical-padding (10px) */
+
+.bvm      { margin: $base-vertical-margin 0px; }
+.bvm-sm   { margin: ceil($base-vertical-margin / 2) 0px; }
+.bvm-md   { margin: ceil($base-vertical-margin + 5) 0px; }
+.bvm-lrg  { margin: ceil($base-vertical-margin * 2) 0px; }
+.bvm-xlrg { margin: ceil($base-vertical-margin * 3) 0px; }
+
+.bvp      { padding: 0px $base-vertical-padding; }
+.bvp-sm   { padding: ceil($base-vertical-padding / 2) 0px; }
+.bvp-md 	{ padding: ceil($base-vertical-padding + 5) 0px; }
+.bvp-lrg 	{ padding: ceil($base-vertical-padding * 2) 0px; }
+.bvp-xlrg { padding: ceil($base-vertical-padding * 3) 0px; }
+
+/* Horizontals  bhm = base-horizontal-margin, bhp = base-horizontal-padding (10px) */
+
+.bhm      { margin: 0px $base-horizontal-margin; }
+.bhm-sm   { margin: 0px ceil($base-horizontal-margin / 2); }
+.bhm-md   { margin: 0px ceil($base-horizontal-margin + 5); }
+.bhm-lrg  { margin: 0px ceil($base-horizontal-margin * 2); }
+.bhm-xlrg { margin: 0px ceil($base-horizontal-margin * 3); }
+
+.bhp      { padding: 0px $base-horizontal-padding; }
+.bhp-sm   { padding: 0px ceil($base-horizontal-padding / 2); }
+.bhp-md 	{ padding: 0px ceil($base-horizontal-padding + 5); }
+.bhp-lrg 	{ padding: 0px ceil($base-horizontal-padding * 2); }
+.bhp-xlrg { padding: 0px ceil($base-horizontal-padding * 3); }

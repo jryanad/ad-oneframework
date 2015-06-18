@@ -1,0 +1,49 @@
+
+/* Accordion */
+
+.accordion h4 {
+	margin-bottom: 0px !important;
+}
+
+h4.acc-trigger a {
+  background-color: $base-acc-trigger-color;
+  padding: 15px;
+  display: block;
+  color: $base-acc-trigger-font-color;
+  font-size: $base-acc-trigger-font-size;
+  font-weight: $base-font-weight;
+  transition: all 0.3s ease;
+}
+
+h4.acc-trigger a.open,
+h4.acc-trigger a:hover {
+	background-color: darken($base-acc-trigger-color, 5%);
+}
+
+h4.acc-trigger a span { 
+	float: right;
+}
+
+.acc-detail {
+	background-color: $base-acc-detail-bg-color;
+  color: $base-tabs-content-font-color;
+  font-size: $base-acc-detail-font-size;
+  padding: 20px;
+  border-color: darken($base-tabs-content-bg-color, 10%);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.icon-openClose:before {
+  font-family: "FontAwesome";
+  content: "\f055";
+  display: block;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: $base-line-height-computed;
+}
+
+h4.acc-trigger a.open .icon-openClose:before{
+  font-family: "FontAwesome";
+  content: "\f056" !important;
+}

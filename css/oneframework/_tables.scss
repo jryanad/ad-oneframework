@@ -1,0 +1,166 @@
+/* Tables
+/* Adopted from TWB Tables SASS v3.3.3
+========================================================================== */
+
+table {
+	background-color: $base-table-bg-color;
+}
+
+caption {
+	padding-top: $base-table-cell-padding;
+	padding-bottom: $base-table-cell-padding;
+	color: lighten($base-font-color, 20%);
+	text-align: left;
+}
+
+th {
+	text-align: left;
+}
+
+// Base Table Styling
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				padding: $base-table-cell-padding;
+				line-height: $base-line-height;
+				vertical-align: top;
+				border-top: 1px solid $base-table-border-color;
+			}
+		}
+	}
+	
+	// Bottom align for column headings
+	> thead > tr > th {
+		vertical-align: bottom;
+		border-bottom: 2px solid $base-table-border-color;
+	}
+	
+	// Remove top border from thead by default
+	> caption + thead,
+	> colgroup + thead,
+	> thead:first-child {
+		> tr:first-child {
+			> th,
+			> td {
+				border-top: 0;
+			}
+		}
+	}
+
+	// If there is more than one tbody instance
+	> tbody + tbody {
+		border-top: 2px solid $base-table-border-color;
+	}
+}
+
+// Condensed with half cell padding
+.condensed-table {
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				padding: $base-table-condensed-cell-padding;
+			}
+		}
+	}
+}
+
+// Bordered Table
+.bordered-table {
+	border: 1px solid $base-table-border-color;
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				border: 1px solid $base-table-border-color;
+			}
+		}
+	}
+	> thead > tr {
+		> th,
+		> td {
+			border-bottom-width: 2px;
+		}
+	}
+}
+
+// Striped Table
+.striped-table {
+	> tbody > tr:nth-of-type(odd) {
+		background-color: $base-table-bg-accent-color;
+	}
+}
+
+// Responsive Table
+.responsive-table {
+	overflow-x: auto;
+	min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		margin-bottom: ($base-line-height-computed * 0.75);
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px solid $base-table-border-color;
+		// Tighten up spacing
+		> .table {
+			margin-bottom: 0;
+			// Ensure the content doesn't wrap
+			> thead,
+			> tbody,
+			> tfoot {
+				> tr {
+					> th,
+					> td {
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+		
+		// Special overrides for the bordered tables
+		> .table-bordered {
+			border: 0;
+			// Nuke the appropriate borders so that the parent can handle them
+			> thead,
+			> tbody,
+			> tfoot {
+				> tr {
+					> th:first-child,
+					> td:first-child {
+						border-left: 0;
+					}
+					> th:last-child,
+					> td:last-child {
+						border-right: 0;
+					}
+				}
+			}
+			// Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+			// chances are there will be only one `tr` in a `thead` and that would
+			// remove the border altogether.
+			> tbody,
+			> tfoot {
+				> tr:last-child {
+					> th,
+					> td {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

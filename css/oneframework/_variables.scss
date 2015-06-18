@@ -1,0 +1,191 @@
+
+// Global Variables
+// 
+// Table of Contents
+//
+// 1)  Font Imports
+// 2)  Site Branding Colors
+// 3)  Default Base Colors
+// 4)  Base Typography
+// 5)  Spacing
+// 6)  Navigation
+// 7)  Buttons
+// 8)  Accordion
+// 9)  Tabs
+// 10) Tables
+// 11) Forms
+// 12) Responsive Nav
+// 13) Social Branding Colors
+// ========================================================================== //
+
+// Add your project name after /
+
+$cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.ssl.cf2.rackcdn.com/projects/";
+
+// 1. Google Font Import ------------------- //
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+// 2. Site Branding Colors ------------------- //
+
+$base-body-bg-color:      #ffffff;
+
+$default-color:           #272932;
+
+$primary-accent-color:    #516E7A;
+$secondary-accent-color:  #FFB128;
+$tertiary-accent-color:   #2E294E;
+
+$body-font: 'Open Sans', sans-serif;
+$body-font-color: #333;
+
+$heading-font: $body-font;
+$heading-font-color: #222222;
+
+
+// 3. Base Colors ------------------- //
+
+$white:     #fff !default;
+$black:     #000 !default;
+$grey:      #333 !default;
+$lightgrey: #f9f9f9 !default;
+$darkgrey:  #222 !default;
+
+// 4. Base Typography -------------- //
+
+$base-font: $body-font !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$base-font-color: $body-font-color !default;
+$base-line-height:             1.428571429 !default; // 23/16
+$base-line-height-computed:    ceil($base-font-size * $base-line-height) !default; // 23px
+
+$base-link-color: $primary-accent-color !default;
+$base-link-hover-color: lighten($primary-accent-color, 5%) !default;
+
+$base-title-h1: ceil($base-font-size * 2.25) !default; // 36px
+$base-title-h2: ceil($base-font-size * 1.85) !default; // 30px
+$base-title-h3: ceil($base-font-size * 1.60) !default; // 26px
+$base-title-h4: ceil($base-font-size * 1.35) !default; // 22px
+$base-title-h5: ceil($base-font-size * 1.25) !default; // 20px
+$base-title-h6: ceil($base-font-size * 1.10) !default; // 18px
+
+$base-title-font:           $heading-font !default;
+$base-title-font-weight:    400 !default;
+$base-title-line-height:    1.1 !default;
+$base-title-color:          $heading-font-color !default;
+
+$lrg-text: ceil($base-font-size * 1.2) !default;
+$sm-text:  floor($base-font-size * 0.65) !default;
+
+
+// 5. Spacing --------------------- //
+
+$nomargin:  0px !default;
+$nopadding: 0px !default;
+
+$base-margin:  10px !default;
+$base-padding: 10px !default;
+
+// Vertical //
+
+$base-vertical-margin:  $base-margin;
+$base-vertical-padding: $base-padding;
+
+// Horizontal //
+
+$base-horizontal-margin:  $base-margin;
+$base-horizontal-padding: $base-padding;
+
+// 6. Navigation --------------------- //
+
+$base-nav-class:  ".primary-nav";
+$base-nav-height: 50px;
+
+$base-nav-bg-color:         $primary-accent-color;
+$base-nav-bg-hover-color:   darken($primary-accent-color, 15%);
+$base-nav-bg-active-color:  $base-nav-bg-hover-color;
+$base-nav-link-color:       $white;
+$base-nav-line-height:      $base-nav-height;
+
+$base-nav-dropdown-color:   $primary-accent-color;
+
+// 7. Buttons --------------------- //
+
+$base-btn-class:  ".btn";
+$base-btn-color:  $default-color;
+$base-btn-height: ceil($base-font-size * 3.12);
+
+$base-btn-font-color:  #222 !default;
+$base-btn-font-size:   $base-font-size;
+$base-btn-font-weight: $base-font-weight;
+$base-btn-font-family: $base-font;
+
+// These are based on the sites accent colors, you can add/remove based on needs 
+// name -> pre-defined accent color -> font color
+$base-btn-accent-colors: ('primary' $primary-accent-color #fff) ('secondary' $secondary-accent-color #fff) ('tertiary' $tertiary-accent-color #fff);
+
+$base-btn-styles: 'flat' 'rounded' 'pill' 'border' '3d' 'white-border';
+$base-btn-sizes:  'small' 'medium' 'large' 'jumbo';
+
+// 8. Accordion --------------------- //
+
+$base-acc-trigger-color:      $secondary-accent-color;
+$base-acc-trigger-font-color: $white;
+$base-acc-trigger-font-size:  ceil($base-font-size + 2);
+$base-acc-detail-bg-color:    $lightgrey;
+$base-acc-detail-font-size:   $base-font-size;
+$base-acc-detail-font-color:  $base-font-color;
+
+
+// 9. Tabs --------------------- //
+
+$base-tab-class:                ".tabs";
+$base-tabs-color:               darken($lightgrey, 5%);
+$base-tabs-active-color:        $primary-accent-color;
+$base-tabs-font-size:           $base-font-size;
+$base-tabs-font-color:          $base-font-color;
+$base-tabs-height:              ceil($base-font-size * 3);
+$base-tabs-content-bg-color:    $white;
+$base-tabs-accent-border-color: $base-tabs-active-color;
+$base-tabs-content-font-color:  $base-font-color;
+
+// 10. Tables --------------------- //
+
+$base-table-cell-padding:           8px !default;
+$base-table-condensed-cell-padding: 5px !default;
+$base-table-bg-color:               transparent !default;
+$base-table-bg-accent-color:        $lightgrey;
+$base-table-border-color:           darken($lightgrey, 10%);
+
+// 11. Forms --------------------- //
+
+$base-input-background-color: $white;
+$base-input-border-color:     $default-color;
+$base-input-focus-color:      #4bc9e6;
+
+// 12. Responsive Menu Custom Theme
+
+$custom-menu-class:                 ".mm-custom";
+$custom-menu-page-shadow:           0 0 10px rgba(0, 0, 0, 0.3);
+$custom-menu-border-color:          rgba(255, 255, 255, 0.2);
+$custom-menu-background-color:      $primary-accent-color;
+$custom-menu-emphasized-bg-color:   rgba(0, 0, 0, 0.1);
+$custom-menu-highlighted-bg-color:  rgba(0, 0, 0, 0.03);
+$custom-menu-text-color:            rgba(255, 255, 255, 0.9);
+$custom-menu-dimmed-text-color:     rgba(255, 255, 255, 0.7);
+$custom-menu-input-bg-color:        rgba(0, 0, 0, 0.1);  
+
+// 13. Social Branding Colors
+
+$facebook-brand-color:    #3b5998;
+$twitter-brand-color:     #00aced;
+$google-plus-brand-color: #dd4b39;
+$youtube-brand-color:     #bb0000;
+$linkedin-brand-color:    #007bb6;
+$yelp-brand-color:        #B4282E;
+$pinterest-brand-color:   #cb2027;
+
+
+
+
