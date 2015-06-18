@@ -1,7 +1,7 @@
 # ad-oneframework
 Repo for ADThemes One Framework Files
 
-These are specific to ADThemes and Sites. 
+These are specific to ADThemes and Sites. Just copy these files into your webroot folder and follow instructions below.
 
 # Setup
 Site specific CSS goes in the _site-layout.scss partial
