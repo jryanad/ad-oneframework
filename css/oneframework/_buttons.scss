@@ -375,6 +375,10 @@ input#{$base-btn-class}, button#{$base-btn-class} {
 
   // Additional Height needed for Form Buttons
   input#{$base-btn-class}-#{$base-btn-size}, button#{$base-btn-class}-#{$base-btn-size} {
+    @if $base-btn-size == 'jumbo' {
+      height: ($base-btn-height * 1.6) + 2;
+    }
+
     @if $base-btn-size == 'large' {
       height: ($base-btn-height * 1.2) + 2;
     }
