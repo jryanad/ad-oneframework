@@ -1,6 +1,6 @@
 
 // Global Mixins
-// 
+//
 // Table of Contents
 //
 // 1)  Clearfix
@@ -25,7 +25,7 @@
 @mixin clearfix() {
   &:before,
   &:after {
-    content: " "; 
+    content: " ";
     display: table;
   }
   &:after {
@@ -148,35 +148,35 @@
 
 // Single side border-radius
 
-@mixin border-top-left-radius($radius) {
-  -webkit-border-top-right-radius: $radius;
-          border-top-right-radius: $radius;
+@mixin border-left-radius($radius) {
   -webkit-border-top-left-radius: $radius;
           border-top-left-radius: $radius;
-          background-clip: padding-box;
-}
-
-@mixin border-top-right-radius($radius) {
-  -webkit-border-bottom-right-radius: $radius;
-          border-bottom-right-radius: $radius;
-  -webkit-border-top-right-radius: $radius;
-          border-top-right-radius: $radius;
-          background-clip: padding-box;
-}
-
-@mixin border-bottom-right-radius($radius) {
-  -webkit-border-bottom-right-radius: $radius;
-          border-bottom-right-radius: $radius;
   -webkit-border-bottom-left-radius: $radius;
           border-bottom-left-radius: $radius;
           background-clip: padding-box;
 }
 
-@mixin border-bottom-left-radius($radius) {
-  -webkit-border-bottom-left-radius: $radius;
-          border-bottom-left-radius: $radius;
+@mixin border-top-radius($radius) {
   -webkit-border-top-left-radius: $radius;
           border-top-left-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+          border-top-right-radius: $radius;
+          background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+          border-top-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+          border-bottom-right-radius: $radius;
+          background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+          border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+          border-bottom-left-radius: $radius;
           background-clip: padding-box;
 }
 
@@ -251,7 +251,7 @@
 
 @mixin skew($x, $y) {
   -webkit-transform: skewX($x) skewY($y);
-  -ms-transform: skewX($x) skewY($y); 
+  -ms-transform: skewX($x) skewY($y);
   -o-transform: skewX($x) skewY($y);
   transform: skewX($x) skewY($y);
 }
@@ -327,4 +327,3 @@
   $opacity-ie: ($opacity * 100);
   filter: alpha(opacity=$opacity-ie);
 }
-
