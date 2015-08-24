@@ -66,7 +66,7 @@ nav#{$base-nav-class} ul {
       @include transition(all, 0.3s, ease);
       line-height: $base-nav-height;
     }
-    
+
     // Level 2 Dropdwon Config
 
     > ul.level-2 {
@@ -89,7 +89,7 @@ nav#{$base-nav-class} ul {
         a {
           padding: 10px 20px;
           color: $white;
-          font-size: $base-font-size - 2;
+          font-size: $base-font-size - 3;
           text-transform: none;
           white-space: nowrap;
           line-height: $base-line-height;
@@ -111,10 +111,6 @@ nav#{$base-nav-class} ul {
             float: none;
             display: block;
             position: relative;
-
-            > a {
-              white-space: normal;
-            }
           }
         }
       }
@@ -133,15 +129,18 @@ nav#{$base-nav-class} ul > li[class*="columns"] {
     padding: 15px 0;
     left: 0px;
     right: 0px;
+    font-size: 0px; /* Inline-Block fix for column rendering */
+    line-height: 0px;
 
     > li[class*="column"] {
       padding: 0 15px;
       display: inline-block;
       vertical-align: top;
       position: relative;
-      
+
       a.column-title {
         background-color: transparent !important;
+        font-size: $base-font-size;
         font-weight: bold;
         cursor: text;
       }
@@ -149,6 +148,10 @@ nav#{$base-nav-class} ul > li[class*="columns"] {
       ul.level-3 {
         position: static;
         box-shadow: none;
+      }
+
+      > li a {
+        white-space: normal;
       }
     }
   }
@@ -211,4 +214,3 @@ nav#{$base-nav-class} li:not(.has-columns) ul.level-2 li ul.level-3 {
   opacity: 0;
   transition: opacity 0.3s,visibility 0.3s;
 }
-
