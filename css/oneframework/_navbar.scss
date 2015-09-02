@@ -69,7 +69,7 @@ nav#{$base-nav-class} ul {
 
     // Level 2 Dropdwon Config
 
-    > ul.level-2 {
+    > ul {
       background-color: darken($primary-accent-color, 10%);
       min-width: 200px;
       height: auto;
@@ -99,7 +99,7 @@ nav#{$base-nav-class} ul {
           }
         }
 
-        > ul.level-3 {
+        > ul {
           min-width: 200px;
           position: absolute;
           display: block;
@@ -123,20 +123,20 @@ nav#{$base-nav-class} ul {
 nav#{$base-nav-class} ul > li[class*="columns"] {
   position: static;
 
-  ul.level-2 {
-    width: 100%;
-    min-width: 200px;
-    padding: 15px 0;
-    left: 0px;
-    right: 0px;
-    font-size: 0px; /* Inline-Block fix for column rendering */
-    line-height: 0px;
+  > ul {
+      width: 100%;
+      min-width: 200px;
+      padding: 15px 0;
+      left: 0px;
+      right: 0px;
+      font-size: 0px; /* Inline-Block fix for column rendering */
+      line-height: 0px;
 
     > li[class*="column"] {
-      padding: 0 15px;
-      display: inline-block;
-      vertical-align: top;
-      position: relative;
+        padding: 0 15px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
 
       a.column-title {
         background-color: transparent !important;
@@ -145,7 +145,7 @@ nav#{$base-nav-class} ul > li[class*="columns"] {
         cursor: text;
       }
 
-      ul.level-3 {
+      ul {
         position: static;
         box-shadow: none;
       }
@@ -163,11 +163,7 @@ nav#{$base-nav-class} ul li[class*="columns"] li.column-3 { width: 33.3333%; }
 nav#{$base-nav-class} ul li[class*="columns"] li.column-4 { width: 25%; }
 nav#{$base-nav-class} ul li[class*="columns"] li.column-5 { width: 20%; }
 
-// Fix flickering issue on page load
-nav#{$base-nav-class} > ul > li > ul {
-  visibility: hidden;
-}
-
+//Flyout Arrow
 .nav-arrow {
   width: 20px;
   height: 20px;
@@ -179,38 +175,35 @@ nav#{$base-nav-class} > ul > li > ul {
 }
 
 .nav-arrow:before {
-  content: "";
+  content: "\f105";
   font-family: fontawesome;
   color: $white;
 }
 
 // Fix for Navigation Conflict with Foundation
-
 nav#{$base-nav-class} [class*=column]+[class*=column]:last-child { float: none !important; }
 
-// Fade in/out with transitions
-nav#{$base-nav-class} li:hover > ul.level-2  {
-	visibility: visible;
-	opacity: 1;
-  display: block;
-	transition: opacity 0.1s,visibility 0.1s;
+// Fix flickering issue on page load
+nav#{$base-nav-class} > ul > li > ul {
+  visibility: hidden;
+  opacity: 0;
 }
 
-nav#{$base-nav-class} ul.level-2 {
-	visibility: hidden;
-	opacity: 0;
-  display: none;
+// Fade in/out with transitions
+nav#{$base-nav-class} li:hover > ul  {
+	visibility: visible;
+	opacity: 1;
 	transition: opacity 0.3s,visibility 0.3s;
 }
 
-nav#{$base-nav-class} li:not(.has-columns) ul.level-2 li:hover ul.level-3 {
+nav#{$base-nav-class} li:not(.has-columns) ul > li:hover > ul {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.1s,visibility 0.1s;
+  transition: opacity 0.3s,visibility 0.3s;
 }
 
-nav#{$base-nav-class} li:not(.has-columns) ul.level-2 li ul.level-3 {
+nav#{$base-nav-class} li:not(.has-columns) ul > li > ul {
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s,visibility 0.3s;
+  transition: opacity 0.1s,visibility 0.1s;
 }

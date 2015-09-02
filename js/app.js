@@ -9,19 +9,15 @@ $(document).ready(function() {
   if (Modernizr.csstransitions) {
     console.log('using transitions for menus');
     // Use CSS transitions for the fade
-    $('.primary-nav > ul > li > ul').addClass('level-2');
-    $('.primary-nav > ul > li > ul > li > ul').addClass('level-3');
-    $('li:not(.has-columns) ul.level-2 > li').append('<span class="nav-arrow"></span>');
-    $('li:not(.has-columns) ul.level-2 > li:has(ul) > span').css('display', 'block');
+    $('li:not(.has-columns) ul > li').append('<span class="nav-arrow"></span>');
+    $('li:not(.has-columns) ul > li:has(ul) > span').css('display', 'block');
 
   } else {
     console.log('using jquery fade for menus');
     // css('visibility', 'visible') to undo the visibility hide/show stuff in CSS (to support IE8 display fading)
-    $('.primary-nav > ul > li > ul').addClass('level-2');
-    $('.primary-nav > ul > li > ul > li > ul').addClass('level-3');
-    $('li:not(.has-columns) ul.level-2 > li').append('<span class="nav-arrow"></span>');
-    $('li:not(.has-columns) ul.level-2 > li:has(ul) > span').css('display', 'block');
-    
+    $('li:not(.has-columns) ul > li').append('<span class="nav-arrow"></span>');
+    $('li:not(.has-columns) ul > li:has(ul) > span').css('display', 'block');
+
     $('.primary-nav > ul > li > ul').css('visibility', 'visible').hide();
     $('.primary-nav > ul > li:has(ul)').hover(
       function () {
