@@ -191,9 +191,9 @@ nav#{$base-nav-class} > ul > li > ul {
 
 // Fade in/out with transitions
 nav#{$base-nav-class} li:hover > ul  {
-	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.3s,visibility 0.3s;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s,visibility 0.3s;
 }
 
 nav#{$base-nav-class} li:not(.has-columns) ul > li:hover > ul {
