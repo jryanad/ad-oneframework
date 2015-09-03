@@ -64,4 +64,11 @@ $(document).ready(function() {
   setTimeout(function() {
     $('.menu-wrapper').show(); // Show the responsive menu after half a second to prevent the flash of unstyled menu
   }, 500);
+
+  /*-------------------------------------------------------------------------*/
+  /*  Font Resizer 2.0
+  /*-------------------------------------------------------------------------*/
+
+  $('#main-content p, #main-content ul li').fontResizer({fontSet:16,setFontOn: 'OFF'});
+  
 });
