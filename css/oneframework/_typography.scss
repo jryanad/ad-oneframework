@@ -44,6 +44,6 @@ strong { font-weight: 700; }
 .text-right          { text-align: right; }
 .text-centered       { text-align: center; }
 .text-justify  			 { text-align: justify; }
-.lrg-text            { font-size: $lrg-text; }
-.sm-text             { font-size: $sm-text; }
+.lrg-text            { font-size: $base-font-size-large; }
+.sm-text             { font-size: $base-font-size-small; }
 

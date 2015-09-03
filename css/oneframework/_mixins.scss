@@ -215,6 +215,31 @@
   -ms-filter:       progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
+// 12. Pagination ------------------- //
+
+@mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  > li {
+    > a,
+    > span {
+      padding: $padding-vertical $padding-horizontal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+    &:first-child {
+      > a,
+      > span {
+        @include border-left-radius($border-radius);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-right-radius($border-radius);
+      }
+    }
+  }
+}
+
 // 12. Transition ------------------- //
 
 @mixin transition($transition-property, $transition-time, $method) {

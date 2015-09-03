@@ -27,7 +27,7 @@ blockquote.right-side {
 blockquote cite {
 	margin-top: 5px;
 	color: lighten($base-font-color, 25%);
-	font-size: ceil($sm-text + 2);
+	font-size: ceil($base-font-size-small + 2);
 	display: block;
 	&:before {
 		content: "- ";

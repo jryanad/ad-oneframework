@@ -14,8 +14,9 @@
 // 9)  Tabs
 // 10) Tables
 // 11) Forms
-// 12) Responsive Nav
-// 13) Social Branding Colors
+// 12) Pagination
+// 13) Responsive Nav
+// 14) Social Branding Colors
 // ========================================================================== //
 
 // Add your project name after /
@@ -24,7 +25,7 @@ $cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.s
 
 // 1. Google Font Import ------------------- //
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic,800);
 
 // 2. Site Branding Colors ------------------- //
 
@@ -53,12 +54,13 @@ $darkgrey:  #222 !default;
 
 // 4. Base Typography -------------- //
 
-$base-font: $body-font !default;
-$base-font-size: 16px !default;
-$base-font-weight: 400 !default;
-$base-font-color: $body-font-color !default;
-$base-line-height:             1.428571429 !default; // 23/16
-$base-line-height-computed:    ceil($base-font-size * $base-line-height) !default; // 23px
+$base-font:                 $body-font !default;
+$base-font-size:            16px !default;
+$base-font-weight:          400 !default;
+$base-font-color:           $body-font-color !default;
+
+$base-font-size-large:  ceil($base-font-size * 1.2) !default;
+$base-font-size-small:  floor($base-font-size * 0.65) !default;
 
 $base-link-color: $primary-accent-color !default;
 $base-link-hover-color: lighten($primary-accent-color, 5%) !default;
@@ -75,11 +77,16 @@ $base-title-font-weight:    400 !default;
 $base-title-line-height:    1.1 !default;
 $base-title-color:          $heading-font-color !default;
 
-$lrg-text: ceil($base-font-size * 1.2) !default;
-$sm-text:  floor($base-font-size * 0.65) !default;
+$base-line-height:          1.428571429 !default; // 23/16
+$base-line-height-computed: ceil($base-font-size * $base-line-height) !default; // 23px
 
 
 // 5. Spacing --------------------- //
+
+$base-border-radius: 5px !default;
+
+$base-line-height-large: 1.3333333 !default;
+$base-line-height-small: 1.5 !default;
 
 $nomargin:  0px !default;
 $nopadding: 0px !default;
@@ -162,9 +169,28 @@ $base-table-border-color:           darken($lightgrey, 10%);
 
 $base-input-background-color: $white;
 $base-input-border-color:     $default-color;
-$base-input-focus-color:      #4bc9e6;
+$base-input-focus-color:      $primary-accent-color;
 
-// 12. Responsive Menu Custom Theme
+// 12. Pagination --------------------- //
+// TODO: Setup Different Styles of Pagination
+
+$base-pagination-link-color:                 $base-link-color !default;
+$base-pagination-bg-color:                   #fff !default;
+$base-pagination-border-color:               #ddd !default;
+
+$base-pagination-hover-color:           $base-link-hover-color !default;
+$base-pagination-hover-bg-color:        $lightgrey !default;
+$base-pagination-hover-border-color:         #ddd !default;
+
+$base-pagination-active-color:          #fff !default;
+$base-pagination-active-bg-color:       $primary-accent-color !default;
+$base-pagination-active-border-color:   $primary-accent-color !default;
+
+$base-pagination-disabled-color:        #ddd !default;
+$base-pagination-disabled-bg-color:     #fff !default;
+$base-pagination-disabled-border-color: #ddd !default;
+
+// 13. Responsive Menu Custom Theme
 
 $custom-menu-class:                 ".mm-custom";
 $custom-menu-page-shadow:           0 0 10px rgba(0, 0, 0, 0.3);
@@ -176,7 +202,7 @@ $custom-menu-text-color:            rgba(255, 255, 255, 0.9);
 $custom-menu-dimmed-text-color:     rgba(255, 255, 255, 0.7);
 $custom-menu-input-bg-color:        rgba(0, 0, 0, 0.1);  
 
-// 13. Social Branding Colors
+// 14. Social Branding Colors
 
 $facebook-brand-color:    #3b5998;
 $twitter-brand-color:     #00aced;
@@ -185,6 +211,8 @@ $youtube-brand-color:     #bb0000;
 $linkedin-brand-color:    #007bb6;
 $yelp-brand-color:        #B4282E;
 $pinterest-brand-color:   #cb2027;
+
+// 15. Social Buttons
 
 $base-social-class:       ".btn-social";
 $base-social-size:        ceil($base-font-size * 2.2);
