@@ -3,34 +3,27 @@
 
 // Default Grid Settings
 
-$base-grid-max-width: 1200px;
+$base-grid-max-width: 75em;
+$base-grid-gutter: 1.875em;
 $base-grid-columns: 12;
-$base-grid-gutter: 30px;
 
 // Default Media Queries
 
-$base-screen-xs: 480px;
-$base-screen-sm: 768px;
-$base-screen-md: 1000px;
-$base-screen-lg: 1200px;
+$base-screen-xs: 30em;
+$base-screen-sm: 48em;
+$base-screen-md: 64em;
+$base-screen-lg: $base-grid-max-width;
 
 // Set Max Screen Width for Media Queries
 
-$base-screen-xs-max: ($base-screen-xs - 1) !default;
-$base-screen-sm-max: ($base-screen-sm - 1) !default;
-$base-screen-md-max: ($base-screen-md - 1) !default;
-$base-screen-lg-max: ($base-screen-lg - 1) !default;
+$breakpoint-xs-max: ($base-screen-xs - 0.1) !default;
+$breakpoint-sm-max: ($base-screen-sm - 0.1) !default;
+$breakpoint-md-max: ($base-screen-md - 0.1) !default;
+$breakpoint-lg-max: ($base-screen-lg - 0.1) !default;
 
-// Grid Container Settings
 
-$base-container-sm: (738px + $base-grid-gutter) !default;
-$grid-sm : $base-container-sm !default;
+// TODO Setup the Grid
 
-$base-container-md: (970px + $base-grid-gutter) !default;
-$grid-md : $base-container-md !default;
+@mixin row() {
 
-$base-container-lg: (1170px + $base-grid-gutter) !default;
-$grid-lg : $base-container-lg !default;
-
-// Setup the Grid
-
+}
