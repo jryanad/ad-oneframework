@@ -42,12 +42,13 @@
 
 // Image Handling ---------------- //
 
-img { 
-	width: 100%; 
+img {
+	width: 100%;
 	max-width: 100%;
 	display: inline-block;
 	vertical-align: middle;
-	-ms-interpolation-mode: bicubic; 
+	-ms-interpolation-mode: bicubic;
+	border: 0px; 
 }
 
 img.non-responsive {
