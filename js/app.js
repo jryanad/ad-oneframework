@@ -20,14 +20,14 @@ $(document).ready(function() {
   if (Modernizr.csstransitions) {
     console.log('using transitions for menus');
     // Use CSS transitions for the fade
-    $('li:not(.has-columns) ul > li').append('<span class="nav-arrow"></span>');
-    $('li:not(.has-columns) ul > li:has(ul) > span').css('display', 'block');
+    $('.primary-nav li:not(.has-columns) ul > li').append('<span class="nav-arrow"></span>');
+    $('.primary-nav li:not(.has-columns) ul > li:has(ul) > span').css('display', 'block');
 
   } else {
     console.log('using jquery fade for menus');
     // css('visibility', 'visible') to undo the visibility hide/show stuff in CSS (to support IE8 display fading)
-    $('li:not(.has-columns) ul > li').append('<span class="nav-arrow"></span>');
-    $('li:not(.has-columns) ul > li:has(ul) > span').css('display', 'block');
+    $('.primary-nav li:not(.has-columns) ul > li').append('<span class="nav-arrow"></span>');
+    $('.primary-nav li:not(.has-columns) ul > li:has(ul) > span').css('display', 'block');
 
     $('.primary-nav > ul > li > ul').css('visibility', 'visible').hide();
     $('.primary-nav > ul > li:has(ul)').hover(
