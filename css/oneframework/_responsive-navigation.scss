@@ -39,7 +39,7 @@
     transition-timing-function: ease;
   }
 
-  html.mm-opening #hamburger::before, 
+  html.mm-opening #hamburger::before,
   html.mm-opening #hamburger::after { top: 20px; }
 
   html.mm-opening #hamburger span {
@@ -117,16 +117,16 @@ $mm_toggleCheckedColor:         #4bd963 !default;
 // Menu Colors --------------------- //
 //////////////////////////////////////
 
-@mixin mm_colors( 
-  $cls: "", 
-  $baseBg: $mm_backgroundColor, 
-  $pageShadow: $mm_pageShadow, 
-  $color: $mm_textColor, 
+@mixin mm_colors(
+  $cls: "",
+  $baseBg: $mm_backgroundColor,
+  $pageShadow: $mm_pageShadow,
+  $color: $mm_textColor,
   $dimmedColor: $mm_dimmedTextColor,
-  $emphasizedBg: $mm_emphasizedBackgroundColor, 
-  $highlightedBg: $mm_highlightedBackgroundColor, 
+  $emphasizedBg: $mm_emphasizedBackgroundColor,
+  $highlightedBg: $mm_highlightedBackgroundColor,
   $borderColor: $mm_borderColor
-) { 
+) {
   html.mm-opened#{$cls} .mm-page {
     box-shadow: $pageShadow;
   }
@@ -164,7 +164,7 @@ $mm_toggleCheckedColor:         #4bd963 !default;
         background: $highlightedBg;
       }
     }
-    
+
     &.mm-vertical .mm-list {
       li.mm-opened {
         > a.mm-subopen,
@@ -176,7 +176,7 @@ $mm_toggleCheckedColor:         #4bd963 !default;
   }
 }
 
-@mixin mm_colors_buttonbars( 
+@mixin mm_colors_buttonbars(
   $cls: "",
   $baseBg: $mm_backgroundColor,
   $color: $mm_textColor
@@ -189,7 +189,7 @@ $mm_toggleCheckedColor:         #4bd963 !default;
       > * {
         border-color: $color;
       }
-      
+
       > input:checked + label {
         background: $color;
         color: $baseBg;
@@ -198,7 +198,7 @@ $mm_toggleCheckedColor:         #4bd963 !default;
   }
 }
 
-@mixin mm_colors_checks( 
+@mixin mm_colors_checks(
   $cls: "",
   $color: $mm_textColor
 ) {
@@ -207,7 +207,7 @@ $mm_toggleCheckedColor:         #4bd963 !default;
   }
 }
 
-@mixin mm_colors_counters( 
+@mixin mm_colors_counters(
   $cls: "",
   $dimmedColor: $mm_dimmedTextColor
 ) {
@@ -216,7 +216,7 @@ $mm_toggleCheckedColor:         #4bd963 !default;
   }
 }
 
-@mixin mm_colors_footer( 
+@mixin mm_colors_footer(
   $cls: "",
   $dimmedColor: $mm_dimmedTextColor,
   $borderColor: $mm_borderColor
@@ -247,7 +247,7 @@ $mm_toggleCheckedColor:         #4bd963 !default;
   }
 }
 
-@mixin mm_colors_labels( 
+@mixin mm_colors_labels(
   $cls: "",
   $highlightedBg: $mm_highlightedBackgroundColor
 ) {
@@ -258,9 +258,9 @@ $mm_toggleCheckedColor:         #4bd963 !default;
   }
 }
 
-@mixin mm_colors_searchfield( 
+@mixin mm_colors_searchfield(
   $cls: "",
-  $inputBg: $mm_dimmedTextColor, 
+  $inputBg: $mm_dimmedTextColor,
   $color: $mm_textColor,
   $dimmedColor: $mm_dimmedTextColor
 ) {
@@ -275,16 +275,16 @@ $mm_toggleCheckedColor:         #4bd963 !default;
   }
 }
 
-@mixin mm_colors_toggles( 
+@mixin mm_colors_toggles(
   $cls: "",
   $buttonBg: $mm_backgroundColor,
-  $offBg: $mm_borderColor, 
+  $offBg: $mm_borderColor,
   $onBg: $mm_toggleCheckedColor
 ) {
   .mm-menu#{$cls} {
     label.mm-toggle {
       background: $offBg;
-    
+
       &:before {
         background: $buttonBg;
       }
@@ -299,10 +299,10 @@ $mm_toggleCheckedColor:         #4bd963 !default;
 // Menu Sizing --------------------- //
 //////////////////////////////////////
 
-@mixin mm_sizing( 
+@mixin mm_sizing(
   $cls: "",
-  $width: $mm_width, 
-  $minWidth: $mm_minWidth, 
+  $width: $mm_width,
+  $minWidth: $mm_minWidth,
   $maxWidth: $mm_maxWidth
 ) {
   .mm-menu#{$cls} {
@@ -332,10 +332,10 @@ $mm_toggleCheckedColor:         #4bd963 !default;
 }
 
 //  Sizing right
-@mixin mm_sizing_right( 
+@mixin mm_sizing_right(
   $cls: "",
-  $width: $mm_width, 
-  $minWidth: $mm_minWidth, 
+  $width: $mm_width,
+  $minWidth: $mm_minWidth,
   $maxWidth: $mm_maxWidth
 ) {
   html.mm-right.mm-opening#{$cls} {
@@ -360,10 +360,10 @@ $mm_toggleCheckedColor:         #4bd963 !default;
 }
 
 //  Sizing z-position
-@mixin mm_sizing_zposition( 
+@mixin mm_sizing_zposition(
   $cls: "",
-  $height: $mm_height, 
-  $minHeight: $mm_minHeight, 
+  $height: $mm_height,
+  $minHeight: $mm_minHeight,
   $maxHeight: $mm_maxHeight
 ) {
 
@@ -579,10 +579,10 @@ html.mm-zoom-panels .mm-menu.mm-horizontal > .mm-panel {
 
   -webkit-transition-property: -webkit-transform, left;
   transition-property: transform, left;
-  
+
   &.mm-opened {
     @include mm_webkit-prefix('transform', scale(1, 1) translateX(0%));
-    
+
     &.mm-subopened {
       @include mm_webkit-prefix('transform', scale($mm_scaleDown, $mm_scaleDown) translateX(-$mm_subpanelOffset));
     }
@@ -642,7 +642,7 @@ html.mm-opened.mm-next .mm-page { box-shadow: none; }
     -ms-transition: -ms-transform $mm_transitionDuration $mm_transitionFunction;
     transition: transform $mm_transitionDuration $mm_transitionFunction;
     @include mm-webkit-prefix('transform', translate(-100%, 0));
-    
+
     &.mm-right {
       @include mm-webkit-prefix('transform', translate(100%, 0));
     }
@@ -676,27 +676,27 @@ $mm_fs_full:   1 !default;
 $mm_fs_min:    140px !default;
 $mm_fs_max:    10000px !default;
 
-@include mm_sizing( 
+@include mm_sizing(
   $mm_fs_class,
-  $mm_fs_full, 
-  $mm_fs_min, 
+  $mm_fs_full,
+  $mm_fs_min,
   $mm_fs_max
 );
 
-@include mm_sizing_right( 
+@include mm_sizing_right(
   $mm_fs_class,
-  $mm_fs_full, 
-  $mm_fs_min, 
+  $mm_fs_full,
+  $mm_fs_min,
   $mm_fs_max
 );
 
-@include mm_sizing_zposition( 
+@include mm_sizing_zposition(
   $mm_fs_class,
-  $mm_fs_full, 
-  $mm_fs_min, 
-  $mm_fs_max 
+  $mm_fs_full,
+  $mm_fs_min,
+  $mm_fs_max
 );
-  
+
 html.mm-opened#{$mm_fs_class} .mm-page { box-shadow: none !important; }
 
 /////////////////////////////////////////
@@ -704,60 +704,60 @@ html.mm-opened#{$mm_fs_class} .mm-page { box-shadow: none !important; }
 ///////////////////////////////////////
 
 @mixin mm_apply_theme() {
-  @include mm_colors( 
-    $mm_t_cls,
-    $mm_t_backgroundColor, 
-    $mm_t_pageShadow,
-    $mm_t_textColor, 
-    $mm_t_dimmedTextColor,
-    $mm_t_emphasizedBackgroundColor, 
-    $mm_t_highlightedBackgroundColor,
-    $mm_t_borderColor 
-  );
-
-  @include mm_colors_buttonbars( 
+  @include mm_colors(
     $mm_t_cls,
     $mm_t_backgroundColor,
-    $mm_t_textColor 
+    $mm_t_pageShadow,
+    $mm_t_textColor,
+    $mm_t_dimmedTextColor,
+    $mm_t_emphasizedBackgroundColor,
+    $mm_t_highlightedBackgroundColor,
+    $mm_t_borderColor
   );
 
-  @include mm_colors_checks( 
+  @include mm_colors_buttonbars(
     $mm_t_cls,
-    $mm_t_textColor 
-  );
-    
-  @include mm_colors_counters( 
-    $mm_t_cls,
-    $mm_t_dimmedTextColor 
+    $mm_t_backgroundColor,
+    $mm_t_textColor
   );
 
-  @include mm_colors_footer( 
+  @include mm_colors_checks(
+    $mm_t_cls,
+    $mm_t_textColor
+  );
+
+  @include mm_colors_counters(
+    $mm_t_cls,
+    $mm_t_dimmedTextColor
+  );
+
+  @include mm_colors_footer(
     $mm_t_cls,
     $mm_t_dimmedTextColor,
-    $mm_t_borderColor 
+    $mm_t_borderColor
   );
 
-  @include mm_colors_header( 
+  @include mm_colors_header(
     $mm_t_cls,
     $mm_t_dimmedTextColor,
-    $mm_t_borderColor 
+    $mm_t_borderColor
   );
-  
-  @include mm_colors_labels( 
+
+  @include mm_colors_labels(
     $mm_t_cls,
-    $mm_t_highlightedBackgroundColor 
+    $mm_t_highlightedBackgroundColor
   );
-  
-  @include mm_colors_searchfield( 
+
+  @include mm_colors_searchfield(
     $mm_t_cls,
     $mm_t_inputBackgroundColor, $mm_t_textColor,
-    $mm_t_dimmedTextColor 
+    $mm_t_dimmedTextColor
   );
-  
-  @include mm_colors_toggles( 
+
+  @include mm_colors_toggles(
     $mm_t_cls,
     $mm_t_backgroundColor,
-    $mm_t_borderColor 
+    $mm_t_borderColor
   );
 }
 
@@ -853,10 +853,10 @@ $mm_t_inputBackgroundColor:       $custom-menu-input-bg-color;
     overflow: scroll;
     overflow-x: hidden;
     overflow-y: auto;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     padding: $mm_padding * 2;
     @include mm_webkit-prefix('transform', translate(100%, 0));
-    
+
     &.mm-opened {
       @include mm_webkit-prefix('transform', translate(0%, 0));
     }
@@ -886,7 +886,7 @@ $mm_t_inputBackgroundColor:       $custom-menu-input-bg-color;
 .mm-panel > .mm-list {
   margin-left: -($mm_padding * 2);
   margin-right: -($mm_padding * 2);
-  
+
   &:first-child {
     padding-top: 0;
   }
@@ -948,7 +948,7 @@ $mm_t_inputBackgroundColor:       $custom-menu-input-bg-color;
 
     &.mm-fullsubopen {
       width: 100%;
-      
+
       &:before {
         border-left: none;
       }
@@ -973,7 +973,7 @@ $mm_t_inputBackgroundColor:       $custom-menu-input-bg-color;
       }
     }
   }
-  
+
   a.mm-subclose {
     text-indent: $mm_btnSize - ($mm_padding * 2);
     padding-top: ($mm_btnSize / 2) + $mm_padding;
@@ -993,7 +993,7 @@ $mm_t_inputBackgroundColor:       $custom-menu-input-bg-color;
   // Spacers
   > li.mm-spacer {
     padding-top: $mm_btnSize;
-    
+
     &.mm-label {
       padding-top: $mm_labelHeight;
     }
@@ -1025,7 +1025,7 @@ $mm_t_inputBackgroundColor:       $custom-menu-input-bg-color;
   .mm-panel {
     display: none;
     padding: $mm_padding 0 $mm_padding $mm_padding;
-    
+
     li:last-child:after {
       border-color: transparent;
     }
@@ -1078,8 +1078,8 @@ $mm_t_inputBackgroundColor:       $custom-menu-input-bg-color;
 html.mm-opened {
   overflow: hidden;
   position: relative;
-  
-  body { 
+
+  body {
     overflow: hidden;
   }
 }
@@ -1211,7 +1211,7 @@ html.mm-opened.mm-dragging {
     }
 
     &.mm-next:after {
-      @include mm_arrow-next; 
+      @include mm_arrow-next;
     }
 
     &.mm-close:after {
@@ -1251,7 +1251,7 @@ $mm_paddingBeneathHeader: $mm_padding * 2 !default;
 
   &.mm-hassearch > .mm-panel {
     padding-top: $mm_headerHeight + $mm_searchHeight + $mm_padding;
-    
+
     &.mm-list {
       padding-top: $mm_headerHeight + $mm_searchHeight - $mm_padding;
     }
@@ -1296,7 +1296,7 @@ $mm_paddingBeneathHeader: $mm_padding * 2 !default;
   > input:checked + label {
     border-color: transparent  !important;
   }
-  
+
   > *:first-child,
   > input:first-child + * {
     border-left: none;
@@ -1330,7 +1330,7 @@ $mm_paddingBeneathHeader: $mm_padding * 2 !default;
   border-radius: none;
   line-height: $mm_footerHeight;
   margin: (-$mm_padding) (-$mm_padding) 0 (-( $mm_padding * 2 ));
-  
+
   > * {
     border-left: none;
   }
@@ -1381,7 +1381,7 @@ div.mm-panel > div.mm-search {
 .mm-search {
   padding: $mm_padding;
 
-  input {   
+  input {
     width: 100%;
     height: $mm_searchfieldHeight;
     margin: 0;
@@ -1400,12 +1400,28 @@ div.mm-panel > div.mm-search {
   }
 }
 
+.mm-search input::-webkit-input-placeholder {
+  color: $mm_textColor;
+}
+
+.mm-search input::-moz-placeholder {
+  color: $mm_textColor;
+}
+
+.mm-search input:-moz-placeholder {
+  color: $mm_textColor;
+}
+
+.mm-search input:-ms-input-placeholder {
+  color: $mm_textColor;
+}
+
 .mm-menu .mm-noresultsmsg {
   padding: ($mm_btnSize * 1.5) 0;
   text-align: center;
   font-size: round($mm_fontSize * 1.5);
   display: none;
-  
+
   &:after {
     border: none !important;
   }
@@ -1420,8 +1436,8 @@ $mm_paddingBeneathHeader: $mm_padding * 2 !default;
 .mm-menu {
   li.mm-nosubresults > a.mm-subopen {
     display: none;
-  
-    + a, 
+
+    + a,
     + span {
       padding-right: 10px;
     }
@@ -1430,7 +1446,7 @@ $mm_paddingBeneathHeader: $mm_padding * 2 !default;
   &.mm-hassearch {
     > .mm-panel {
       padding-top: $mm_searchHeight + $mm_paddingBeneathHeader;
-      
+
       > .mm-list:first-child {
         margin-top: -$mm_paddingBeneathHeader;
       }
@@ -1441,7 +1457,7 @@ $mm_paddingBeneathHeader: $mm_padding * 2 !default;
     > .mm-panel {
       > div.mm-search:first-child {
         margin-top: -$mm_padding;
-        
+
         + .mm-list {
           padding-top: 0;
         }
@@ -1522,4 +1538,3 @@ em.mm-counter {
 }
 
 @include mm_colors_footer;
-
