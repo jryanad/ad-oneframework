@@ -1,6 +1,6 @@
 
 // Global Variables
-// 
+//
 // Table of Contents
 //
 // 1)  Font Imports
@@ -128,7 +128,7 @@ $base-btn-font-size:   $base-font-size;
 $base-btn-font-weight: $base-font-weight;
 $base-btn-font-family: $base-font;
 
-// These are based on the sites accent colors, you can add/remove based on needs 
+// These are based on the sites accent colors, you can add/remove based on needs
 // name -> pre-defined accent color -> font color
 $base-btn-accent-colors: ('primary' $primary-accent-color #fff) ('secondary' $secondary-accent-color #fff) ('tertiary' $tertiary-accent-color #fff);
 
@@ -200,7 +200,7 @@ $custom-menu-emphasized-bg-color:   rgba(0, 0, 0, 0.1);
 $custom-menu-highlighted-bg-color:  rgba(0, 0, 0, 0.03);
 $custom-menu-text-color:            rgba(255, 255, 255, 0.9);
 $custom-menu-dimmed-text-color:     rgba(255, 255, 255, 0.7);
-$custom-menu-input-bg-color:        rgba(0, 0, 0, 0.1);  
+$custom-menu-input-bg-color:        rgba(0, 0, 0, 0.1);
 
 // 14. Social Branding Colors
 
@@ -219,5 +219,3 @@ $base-social-size:        ceil($base-font-size * 2.2);
 $base-social-line-height: $base-social-size;
 
 $base-social-brand-colors: ('facebook' $facebook-brand-color) ('twitter' $twitter-brand-color) ('google-plus' $google-plus-brand-color) ('youtube' $youtube-brand-color) ('linkedin' $linkedin-brand-color) ('yelp' $yelp-brand-color) ('pinterest' $pinterest-brand-color);
-
-
