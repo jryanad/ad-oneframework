@@ -1,9 +1,9 @@
-#ad-oneframework v2.0
+# ad-oneframework v2.0
 This is a port of the One Framework for use with AudiologyDesign websites.
 
 Copy these files into your webroot folder and follow instructions below for basic setup. To see the stand alone version you can see it [here](http://staging.34one.com/one-framework) - will update this soon.
 
-#Whats Different
+# Whats Different
 1. All partials are now self-contained and are now fully customizable
 2. REM to Pixel Conversion - e.g. *margin-top: rem(put pixel value); will convert to rem*
 3. Updated to FontAwesome 4.4.0
@@ -19,3 +19,26 @@ Just copy these files into *webroot* in your project folder and open *layout.scs
 The JS for things like *dropdown menu*, *responsive menu*, *backtotopbutton*, and *fontresizer* are included in both the app.js and plugins.js. These must be defined in your assets.json file in order for these components to work on your site.
 
 Also, there are 2 files in *Components* for tabs.js & accordion.js, just add these to your assets.json file as needed.
+
+# TODO's
+
+* Create a Spacing Partial for easy spacing control on the front-end using classes
+* Update tabs to a more responsive approach
+* Create an extension or partial for Material Design Cards
+* Create new *navbar-inline* partial for alternative navigation setup
+* Create Sticky Header option to work with new *navbar-inline*
+* Create alternative pagination styles
+* Create Grid System (possibly with flexbox & polyfill for IE9 support)
+* Create Thumb Grid partial similarly to Foundation's Block Grid for photo gallery generation
+
+# Changelog
+
+### October 2nd, 2015
+
+* New: REM to Pixel Conversion
+* New: Info Boxes to use for system notifications
+* New: Floating Back to Top Button
+* New: One Framework Extensions
+* Updated: FontAwesome 4.4.0
+* Updated: File & Directory Schematic for ease of use
+* Updated: Moved core framework defaults into one centralized location
