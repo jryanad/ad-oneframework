@@ -240,12 +240,26 @@ $base-font-size-small: rem(12);
 
 // Accordion //
 //----------------------------------
-// $base-acc-trigger-color:      $secondary-accent-color;
-// $base-acc-trigger-font-color: $white;
-// $base-acc-trigger-font-size:  rem(18);
-// $base-acc-detail-bg-color:    $lightgrey;
-// $base-acc-detail-font-size:   $base-font-size;
-// $base-acc-detail-font-color:  $base-font-color;
+// $base-acc-trigger-color:                 $secondary-accent-color;
+// $base-acc-trigger-open-and-hover-color:  darken($base-acc-trigger-color, 5%);
+// $base-acc-trigger-font-color:            $white;
+// $base-acc-trigger-font-size:             rem(18);
+// $base-acc-trigger-padding:               rem(15 30 15 15);
+
+// $base-acc-trigger-icon-width:            rem(30);
+// $base-acc-trigger-icon-height:           $base-acc-trigger-icon-width;
+// $base-acc-trigger-icon-line-height:      $base-acc-trigger-icon-height;
+// $base-acc-trigger-icon-margin-top:       (($base-acc-trigger-icon-height / 2) * -1);
+// $base-acc-trigger-icon-font-size:        rem(20);
+// $base-acc-trigger-icon-font-family:      "FontAwesome";
+// $base-acc-trigger-icon-closed:           "\f055";
+// $base-acc-trigger-icon-open:             "\f056";
+
+// $base-acc-detail-bg-color:              $lightgrey;
+// $base-acc-detail-font-size:             $base-font-size;
+// $base-acc-detail-font-color:            $base-font-color;
+// $base-acc-detail-padding:               rem(20);
+// $base-acc-detail-border:                1px solid darken($base-acc-detail-bg-color, 10%);
 
 // Simple Tabs //
 //----------------------------------
