@@ -252,10 +252,13 @@ $base-font-size-small: rem(12);
 // $base-tab-class:                ".tabs";
 // $base-tabs-color:               darken($lightgrey, 5%);
 // $base-tabs-active-color:        $primary-accent-color;
-// $base-tabs-font-size:           $base-font-size;
+// $base-tabs-font-size:           rem(16);
 // $base-tabs-font-color:          $base-font-color;
-// $base-tabs-height:              ceil($base-font-size * 3);
+// $base-tabs-width:               auto;
+// $base-tabs-height:              ($base-tabs-font-size * 3);
+// $base-tabs-horizontal-padding:  rem(20);
 // $base-tabs-content-bg-color:    $white;
+// $base-tabs-content-padding:     rem(20);
 // $base-tabs-accent-border-color: $base-tabs-active-color;
 // $base-tabs-content-font-color:  $base-font-color;
 
