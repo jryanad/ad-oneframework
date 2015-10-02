@@ -32,6 +32,7 @@ Also, there are 2 files in *Components* for tabs.js & accordion.js, just add the
 * Create Thumb Grid partial similarly to Foundation's Block Grid for photo gallery generation
 * Create a *lists* partial to handle different types of *lists*, e.g. unordered, ordered, etc.
 * Create a more robust *inline-list* partial
+* Create a *fontresizer* extension
 
 # Changelog
 
