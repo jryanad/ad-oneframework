@@ -23,13 +23,15 @@ Also, there are 2 files in *Components* for tabs.js & accordion.js, just add the
 # TODO's
 
 * Create a Spacing Partial for easy spacing control on the front-end using classes
-* Update tabs to a more responsive approach
+* Create a more robust *tabs* component
 * Create an extension or partial for Material Design Cards
 * Create new *navbar-inline* partial for alternative navigation setup
 * Create Sticky Header option to work with new *navbar-inline*
-* Create alternative pagination styles
+* Create alternative pagination styles do designers can have more options
 * Create Grid System (possibly with flexbox & polyfill for IE9 support)
 * Create Thumb Grid partial similarly to Foundation's Block Grid for photo gallery generation
+* Create a *lists* partial to handle different types of *lists*, e.g. unordered, ordered, etc.
+* Create a more robust *inline-list* partial
 
 # Changelog
 
@@ -42,3 +44,4 @@ Also, there are 2 files in *Components* for tabs.js & accordion.js, just add the
 * Updated: FontAwesome 4.4.0
 * Updated: File & Directory Schematic for ease of use
 * Updated: Moved core framework defaults into one centralized location
+* Updated and cleaned up both components - *tabs* & *accordion* for easier customization
