@@ -1,12 +1,12 @@
 /* Reset (Based on normalize.css)
 ========================================= */
 
-html, body, div, span, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, 
+html, body, div, span, applet, object, iframe, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
 center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,output,section, summary, time, mark, audio, video {
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    vertical-align: baseline; 
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  vertical-align: baseline;
 }
 
 body { -webkit-text-size-adjust: 100%; }
@@ -16,7 +16,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 
 audio:not([controls]) { display: none; height: 0; }
-    
+
 table { border-collapse: collapse; border-spacing: 0; }
 
 svg:not(:root) { overflow: hidden; }
@@ -25,18 +25,18 @@ svg:not(:root) { overflow: hidden; }
 ::selection { background: #b3d4fc; text-shadow: none; }
 
 *, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 pre { margin: 14px 0; }
 
 code, kbd, pre, samp {
-    font-family: monospace, serif;
-    _font-family: 'courier new', monospace;
-    font-size: 16px;
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 16px;
 }
 
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
@@ -57,46 +57,46 @@ fieldset { border: none; margin: 0 2px; padding: 5px 10px 12px; }
 legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px; }
 
 button, input, select, textarea {
-    font-size: 100%; 
-    margin: 0; 
-    vertical-align: baseline;
-    *vertical-align: middle;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
 }
 
 button, input { line-height: normal; }
 button, select { text-transform: none; }
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button; 
-    cursor: pointer; 
-    *overflow: visible;
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
 }
 
 button[disabled], html input[disabled] { cursor: default; }
 
 input[type="checkbox"], input[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-    *height: 13px;
-    *width: 13px;
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
 }
 
 input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 textarea { overflow: auto; vertical-align: top; resize: vertical; }

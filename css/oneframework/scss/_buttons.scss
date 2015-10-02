@@ -56,10 +56,10 @@ $base-btn-fs-medium: inherit;
 $base-btn-fs-large:  inherit;
 $base-btn-fs-jumbo:  inherit;
 @if $base-btn-font-size != inherit {
-	$base-btn-fs-small:  $base-btn-font-size - 4;
-	$base-btn-fs-medium: $base-btn-font-size - 2;
-	$base-btn-fs-large:  $base-btn-font-size + 2;
-	$base-btn-fs-jumbo:  $base-btn-font-size + 4;
+  $base-btn-fs-small:  $base-btn-font-size - 4;
+  $base-btn-fs-medium: $base-btn-font-size - 2;
+  $base-btn-fs-large:  $base-btn-font-size + 2;
+  $base-btn-fs-jumbo:  $base-btn-font-size + 4;
 }
 
 // Base Button Build
@@ -170,18 +170,18 @@ input#{$base-btn-class}, button#{$base-btn-class} {
   #{$base-btn-class}-white-border {
     background: none;
     color: $white;
-		line-height: $base-btn-height - rem(4);
+    line-height: $base-btn-height - rem(4);
     @include box-shadow(none);
     @include border(2px, solid, $white);
 
     &:hover, &:focus {
       background-color: $white;
-			color: $base-btn-font-color;
+      color: $base-btn-font-color;
     }
 
     &:active, &.is-active, &.active {
       background-color: darken($white, 2%);
-			color: darken($base-btn-color, 50%);
+      color: darken($base-btn-color, 50%);
       @include border(2px, solid, darken($white, 2%));
     }
 

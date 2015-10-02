@@ -19,24 +19,24 @@ $base-input-line-height:         $base-line-height !default;
 
 
 fieldset {
-	background-color: lighten($default-color, 10%);
-	margin: rem(10 0);
-	padding: rem(20);
-	@include border(1px, solid, $base-input-border-color);
+  background-color: lighten($default-color, 10%);
+  margin: rem(10 0);
+  padding: rem(20);
+  @include border(1px, solid, $base-input-border-color);
 }
 
 label {
-	max-width: 100%;
-	margin-bottom: rem(5);
-	color: $base-label-font-color;
-	font-size: $base-label-font-size;
-	font-weight: $base-label-font-weight;
-	display: block;
+  max-width: 100%;
+  margin-bottom: rem(5);
+  color: $base-label-font-color;
+  font-size: $base-label-font-size;
+  font-weight: $base-label-font-weight;
+  display: block;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-	margin: rem(0 0 5);
+  margin: rem(0 0 5);
 }
 
 input[type="radio"] + label,
@@ -45,7 +45,7 @@ input[type="checkbox"] + label {
   margin-right: rem(14);
   margin-bottom: 0px;
   vertical-align: baseline;
-	display: inline-block;
+  display: inline-block;
 }
 
 input[type="text"],
@@ -54,37 +54,37 @@ input[type="password"],
 input[type="tel"],
 input[type="date"],
 select, textarea {
-	background-color: $base-input-background-color;
-	width: 100%;
-	margin-bottom: $base-input-margin-bottom;
-	padding: $base-input-padding;
-	color: $base-input-font-color;
-	font-family: $base-input-font-family;
-	line-height: $base-input-line-height;
-	display: block;
-	@include border(1px, solid, $base-input-border-color);
-	@include transition(border-color, 0.3s, ease);
-	-webkit-appearance: none;
+  background-color: $base-input-background-color;
+  width: 100%;
+  margin-bottom: $base-input-margin-bottom;
+  padding: $base-input-padding;
+  color: $base-input-font-color;
+  font-family: $base-input-font-family;
+  line-height: $base-input-line-height;
+  display: block;
+  @include border(1px, solid, $base-input-border-color);
+  @include transition(border-color, 0.3s, ease);
+  -webkit-appearance: none;
 
 	&:hover {
-		border-color: darken($base-input-border-color, 10%);
+    border-color: darken($base-input-border-color, 10%);
 	}
 
 	&:focus {
-		border-color: $base-input-border-focus-color;
-		box-shadow: 0 0 5px rgba($base-input-border-focus-color, 0.4);
-		outline: none;
+    border-color: $base-input-border-focus-color;
+    box-shadow: 0 0 5px rgba($base-input-border-focus-color, 0.4);
+    outline: none;
 	}
 
 	@include placeholder;
 }
 
 textarea {
-	min-height: 200px;
-	resize: vertical;
+  min-height: 200px;
+  resize: vertical;
 }
 
 input[type="search"] {
-	-webkit-appearance: none;
-	@include box-sizing(border-box);
+  -webkit-appearance: none;
+  @include box-sizing(border-box);
 }

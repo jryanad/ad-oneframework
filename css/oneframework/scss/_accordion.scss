@@ -28,9 +28,9 @@ $base-acc-detail-padding:               rem(20) !default;
 $base-acc-detail-border:                1px solid darken($base-acc-detail-bg-color, 10%) !default;
 
 h4.acc-trigger {
-	margin-top: rem(5);
-	margin-bottom: 0;
-	position: relative;
+  margin-top: rem(5);
+  margin-bottom: 0;
+  position: relative;
 }
 
 h4.acc-trigger a {
@@ -45,26 +45,26 @@ h4.acc-trigger a {
 
 h4.acc-trigger a.open,
 h4.acc-trigger a:hover {
-	background-color: $base-acc-trigger-open-and-hover-color;
+  background-color: $base-acc-trigger-open-and-hover-color;
 }
 
 h4.acc-trigger a span {
-	width: $base-acc-trigger-icon-width;
-	height: $base-acc-trigger-icon-height;
-	margin-top: $base-acc-trigger-icon-margin-top;
-	text-align: center;
-	display: block;
-	line-height: $base-acc-trigger-icon-line-height;
-	position: absolute;
-	top: 50%;
-	right: rem(5);
+  width: $base-acc-trigger-icon-width;
+  height: $base-acc-trigger-icon-height;
+  margin-top: $base-acc-trigger-icon-margin-top;
+  text-align: center;
+  display: block;
+  line-height: $base-acc-trigger-icon-line-height;
+  position: absolute;
+  top: 50%;
+  right: rem(5);
 }
 
 .icon-openClose:before {
   content: $base-acc-trigger-icon-closed;
   font-size: $base-acc-trigger-icon-font-size;
-	font-family: $base-acc-trigger-icon-font-family;
-	display: block;
+  font-family: $base-acc-trigger-icon-font-family;
+  display: block;
 }
 
 h4.acc-trigger a.open .icon-openClose:before{
@@ -73,11 +73,11 @@ h4.acc-trigger a.open .icon-openClose:before{
 }
 
 .acc-detail {
-	background-color: $base-acc-detail-bg-color;
+  background-color: $base-acc-detail-bg-color;
   color: $base-acc-detail-font-color;
   font-size: $base-acc-detail-font-size;
   padding: $base-acc-detail-padding;
   border-left: $base-acc-detail-border;
-	border-right: $base-acc-detail-border;
-	border-bottom: $base-acc-detail-border;
+  border-right: $base-acc-detail-border;
+  border-bottom: $base-acc-detail-border;
 }

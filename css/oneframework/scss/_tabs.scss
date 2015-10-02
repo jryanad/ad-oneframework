@@ -18,64 +18,64 @@ $base-tabs-accent-border-color: $base-tabs-active-color !default;
 $base-tabs-content-font-color:  $base-font-color !default;
 
 ul.tabs {
-	margin: 0;
-	padding: 0px;
-	font-size: 0; // Collapse Inline Spacing
-	display: block;
-	border-bottom: 3px solid $base-tabs-accent-border-color;
+.DS_Storemargin: 0;
+.DS_Storepadding: 0px;
+.DS_Storefont-size: 0; // Collapse Inline Spacing
+.DS_Storedisplay: block;
+.DS_Storeborder-bottom: 3px solid $base-tabs-accent-border-color;
 }
 
 ul.tabs li:first-child {
-	margin: 0;
+  margin: 0;
 }
 
 ul.tabs li {
-	margin-left: rem(2);
-	padding: 0;
-	display: inline-block;
-	list-style-type: none !important;
+  margin-left: rem(2);
+  padding: 0;
+  display: inline-block;
+  list-style-type: none !important;
 }
 
 ul.tabs li a {
-	background-color: $base-tabs-color;
-	width: $base-tabs-width;
-	height: $base-tabs-height;
-	margin: 0;
-	padding: 0 $base-tabs-horizontal-padding;
-	font-size: $base-tabs-font-size;
-	color: $base-tabs-font-color;
-	text-align: center;
-	text-decoration: none;
-	line-height: $base-tabs-height;
-	display: block;
-	@include transition(all, 0.3s, ease);
+  background-color: $base-tabs-color;
+  width: $base-tabs-width;
+  height: $base-tabs-height;
+  margin: 0;
+  padding: 0 $base-tabs-horizontal-padding;
+  font-size: $base-tabs-font-size;
+  color: $base-tabs-font-color;
+  text-align: center;
+  text-decoration: none;
+  line-height: $base-tabs-height;
+  display: block;
+  @include transition(all, 0.3s, ease);
 }
 
 ul.tabs li a:hover {
-	background-color: $base-tabs-active-color;
-	color: $white;
+  background-color: $base-tabs-active-color;
+  color: $white;
 }
 
 ul.tabs li a.active {
-	background-color: $base-tabs-active-color;
-	color: $white;
+  background-color: $base-tabs-active-color;
+  color: $white;
 }
 
 ul.tabs-content {
-	margin: 0px;
-	padding: 0px;
-	border-left:   1px solid darken($base-tabs-content-bg-color, 10%);
-	border-right:  1px solid darken($base-tabs-content-bg-color, 10%);
-	border-bottom: 1px solid darken($base-tabs-content-bg-color, 10%);
+  margin: 0px;
+  padding: 0px;
+  border-left:   1px solid darken($base-tabs-content-bg-color, 10%);
+  border-right:  1px solid darken($base-tabs-content-bg-color, 10%);
+  border-bottom: 1px solid darken($base-tabs-content-bg-color, 10%);
 }
 
 ul.tabs-content > li {
-	background-color: $base-tabs-content-bg-color;
-	padding: $base-tabs-content-padding;
-	display: none;
+  background-color: $base-tabs-content-bg-color;
+  padding: $base-tabs-content-padding;
+  display: none;
   list-style-type: none !important;
 }
 
 ul.tabs-content > li.active {
-	display: block !important;
+  display: block !important;
 }
