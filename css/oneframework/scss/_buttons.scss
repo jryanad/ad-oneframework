@@ -1,5 +1,24 @@
 
-/* Button Styles */
+// Button Styles
+//----------------------------------
+
+@import "defaults";
+
+$base-btn-class:        ".btn" !default;
+$base-btn-height:       rem(50) !default;
+$base-btn-color:        #ddd !default;
+$base-btn-font-color:   #222 !default;
+$base-btn-font-size:    $base-font-size !default;
+$base-btn-font-weight:  $base-font-weight !default;
+$base-btn-font-family:  $base-font !default;
+$base-btn-line-height:  $base-btn-height !default;
+
+// These are based on the sites accent colors, you can add/remove based on needs
+// name -> pre-defined accent color -> font color
+$base-btn-accent-colors: ('primary' $primary-accent-color #fff) ('secondary' $secondary-accent-color #fff) ('tertiary' $tertiary-accent-color #fff) !default;
+
+$base-btn-styles: 'flat' 'rounded' 'pill' 'border' '3d' 'white-border' !default;
+$base-btn-sizes:  'small' 'medium' 'large' 'jumbo' !default;
 
 // Define Button Build Types
 // Decide which styles to include in final css build
@@ -31,8 +50,7 @@ $base-btn-3d-build: false;
   }
 }
 
-
-//Button Sizes
+// Button Sizes
 $base-btn-fs-small:  inherit;
 $base-btn-fs-medium: inherit;
 $base-btn-fs-large:  inherit;
@@ -57,9 +75,11 @@ $base-btn-fs-jumbo:  inherit;
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  line-height: $base-btn-height;
+  line-height: $base-btn-line-height;
   @include box-shadow(0px 1px 0px rgba(255, 255, 255, .5) inset, 0px 1px 2px rgba(0, 0, 0, .15));
   @include border(1px, solid, darken($base-btn-color, 10%));
+  @include transition(all, 0.3s, ease);
+
 
   &:hover, &:focus, &:active, &.is-active, &.active {
     text-decoration: none;
@@ -83,7 +103,7 @@ $base-btn-fs-jumbo:  inherit;
 
 // Additional Height Needed for Form Buttons
 input#{$base-btn-class}, button#{$base-btn-class} {
-  height: $base-btn-height + 2;
+  height: $base-btn-height + rem(2);
   cursor: pointer;
   -webkit-appearance: none;
 }
@@ -100,7 +120,6 @@ input#{$base-btn-class}, button#{$base-btn-class} {
     $base-btn-accent-bg-color: $base-btn-color;
     $base-btn-accent-font-color: $base-btn-font-color;
     background-color: $base-btn-accent-bg-color;
-    @include transition(all, 0.3s, ease);
     @include box-shadow(none);
     border: none;
 
@@ -127,9 +146,8 @@ input#{$base-btn-class}, button#{$base-btn-class} {
     $base-btn-accent-font-color: $base-btn-font-color;
     background: none;
     color: $base-btn-accent-font-color;
-		line-height: ceil($base-btn-height - 4);
+		line-height: $base-btn-height - rem(4);
     @include box-shadow(none);
-    @include transition(all, 0.3s, ease);
     @include border(2px, solid, $base-btn-accent-bg-color);
 
     &:hover, &:focus {
@@ -152,8 +170,7 @@ input#{$base-btn-class}, button#{$base-btn-class} {
   #{$base-btn-class}-white-border {
     background: none;
     color: $white;
-		line-height: ceil($base-btn-height - 4);
-    @include transition(all, 0.3s, ease);
+		line-height: $base-btn-height - rem(4);
     @include box-shadow(none);
     @include border(2px, solid, $white);
 
@@ -185,7 +202,6 @@ input#{$base-btn-class}, button#{$base-btn-class} {
     color: $base-btn-accent-font-color;
     position: relative;
     top: 0px;
-    @include transition(all, 0.3s, ease);
     @include box-shadow(0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 7px 0px darken($base-btn-accent-bg-color, 20%), 0px 8px 3px rgba(0, 0, 0, .2));
     @include border(1px, solid, darken($base-btn-accent-bg-color, 5%));
 
@@ -255,7 +271,6 @@ input#{$base-btn-class}, button#{$base-btn-class} {
     #{$base-btn-class}-flat-#{$base-btn-accent-name} {
       background-color: $base-btn-accent-bg-color;
       color: $base-btn-accent-font-color;
-      @include transition(all, 0.3s, ease);
       @include box-shadow(none);
       border: none;
 
@@ -281,7 +296,6 @@ input#{$base-btn-class}, button#{$base-btn-class} {
       background: none;
       color: $base-btn-accent-bg-color;
       line-height: ceil($base-btn-height - 4);
-      @include transition(all, 0.3s, ease);
       @include box-shadow(none);
       @include border(2px, solid, $base-btn-accent-bg-color);
 
@@ -312,7 +326,6 @@ input#{$base-btn-class}, button#{$base-btn-class} {
       color: $base-btn-accent-font-color;
       position: relative;
       top: 0px;
-      @include transition(all, 0.3s, ease);
       @include box-shadow(0px 1px 0px rgba(255, 255, 255, .3) inset, 0px -1px 1px rgba(255, 255, 255, .15) inset, 0px 7px 0px darken($base-btn-accent-bg-color, 10%), 0px 8px 3px rgba(0, 0, 0, .30));
       @include border(1px, solid, darken($base-btn-accent-bg-color, 10%));
 

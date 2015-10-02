@@ -1,3 +1,56 @@
+// Global Config for One Framework
+//----------------------------------
+
+@import "../functions";
+
+// Site Specific Styles Overridden
+// in _site-settings.scss
+//----------------------------------
+
+// Default Framework Colors
+//----------------------------------
+
+$base-body-bg-color:     #ffffff !default;
+
+// Branding
+$primary-accent-color:   #1B83B4 !default;
+$secondary-accent-color: #00A8E8 !default;
+$tertiary-accent-color:  #003459 !default;
+$default-color:          #00171F !default;
+
+// Defaults
+$white:     #fff !default;
+$black:     #000 !default;
+$grey:      #333 !default;
+$lightgrey: #f9f9f9 !default;
+$darkgrey:  #222 !default;
+
+// Default Typography Setup
+//----------------------------------
+
+$base-font:        "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$base-font-size:   100% !default;
+$base-font-weight: 400 !default;
+$base-font-color:  #333 !default;
+
+$base-link-color:       $primary-accent-color !default;
+$base-link-hover-color: lighten($primary-accent-color, 5%) !default;
+
+$base-line-height: 1.5 !default; // 24/16
+
+$base-font-size-large: rem(18) !default;
+$base-font-size-small: rem(12) !default;
+
+// Spacing
+//----------------------------------
+
+$base-border-radius: rem(5) !default;
+
+$nomargin:  0px !default;
+$nopadding: 0px !default;
+
+$base-margin:  rem(10) !default;
+$base-padding: rem(10) !default;
 
 // Global Mixins
 //
@@ -20,7 +73,7 @@
 // 15) Opacity
 // ========================================================================== //
 
-// 1. Clearfix ------------------- //
+// 1. Clearfix //
 
 @mixin clearfix() {
   &:before,
@@ -33,7 +86,7 @@
   }
 }
 
-// 2. Peek-a-boo ------------------- //
+// 2. Peek-a-boo //
 
 @mixin show($display: block) {
   display: $display;
@@ -44,7 +97,7 @@
   visibility: hidden !important;
 }
 
-// 3. Typography ------------------- //
+// 3. Typography //
 
 @mixin uppercase { text-transform: uppercase; }
 
@@ -58,7 +111,7 @@
 
 @mixin outline { outline: none; }
 
-// 4. Centered Content Block ------------------- //
+// 4. Centered Content Block //
 
 @mixin centered-content-block () {
   margin-left: auto;
@@ -66,7 +119,7 @@
   display: table;
 }
 
-// 5. Inline Lists ------------------- //
+// 5. Inline Lists //
 
 @mixin list-inline() {
   margin: 0px;
@@ -89,7 +142,7 @@
   }
 }
 
-// 6. Positioning ------------------- //
+// 6. Positioning //
 
 @mixin fx-position ($top, $right, $bottom, $left, $z-index) {
   position: fixed;
@@ -114,7 +167,7 @@
   z-index: $z-index;
 }
 
-// 7. Box Sizing ------------------- //
+// 7. Box Sizing //
 
 @mixin box-sizing($box-model) {
   -webkit-box-sizing: $box-model;
@@ -122,14 +175,14 @@
           box-sizing: $box-model;
 }
 
-// 8. Box-Shadow ------------------- //
+// 8. Box-Shadow //
 
 @mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow;
           box-shadow: $shadow;
 }
 
-// 9. Simple Borders ------------------- //
+// 9. Simple Borders //
 
 @mixin border($width, $style, $color) {
   border-width: $width;
@@ -137,7 +190,7 @@
   border-color: $color;
 }
 
-// 10. Border Radius ------------------- //
+// 10. Border Radius //
 
 @mixin border-radius($radius...) {
   -webkit-border-radius: $radius;
@@ -179,7 +232,7 @@
           background-clip: padding-box;
 }
 
-// 11. Gradients ------------------- //
+// 11. Gradients //
 
 // Linear Gradient
 
@@ -215,32 +268,7 @@
   -ms-filter:       progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
-// 12. Pagination ------------------- //
-
-@mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  > li {
-    > a,
-    > span {
-      padding: $padding-vertical $padding-horizontal;
-      font-size: $font-size;
-      line-height: $line-height;
-    }
-    &:first-child {
-      > a,
-      > span {
-        @include border-left-radius($border-radius);
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        @include border-right-radius($border-radius);
-      }
-    }
-  }
-}
-
-// 12. Transition ------------------- //
+// 12. Transition //
 
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
@@ -250,7 +278,7 @@
     transition: $transition-property $transition-time $method;
 }
 
-// 13. Transformations ------------------- //
+// 13. Transformations //
 
 @mixin scale($ratio...) {
   -webkit-transform: scale($ratio);
@@ -331,7 +359,7 @@
   transform-origin: $origin;
 }
 
-// 14. Placeholder Text ------------------- //
+// 14. Placeholder Text //
 
 @mixin placeholder($color: $base-input-border-color) {
     // Firefox
@@ -343,7 +371,7 @@
   &::-webkit-input-placeholder { color: darken($color, 20%); } // Safari and Chrome
 }
 
-// 15. Opacity ------------------- //
+// 15. Opacity //
 
 @mixin opacity($opacity) {
   opacity: $opacity;

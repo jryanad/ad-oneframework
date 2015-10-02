@@ -1,0 +1,42 @@
+// Stack
+//----------------------------------
+
+@import "defaults";
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+body {
+	background-color: $base-body-bg-color;
+	font-family: $base-font;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	color: $base-font-color;
+	line-height: $base-line-height;
+}
+
+a {
+	color: $primary-accent-color;
+	@include no-decoration;
+	@include outline;
+	&:hover,
+  &:active,
+	&:focus {
+		color: lighten($primary-accent-color, 10%);
+	}
+
+  img {
+    border: none;
+  }
+}
+
+hr {
+	background: $default-color;
+	height: 1px;
+	margin: rem(30 0);
+	border: none;
+	@include box-sizing(content-box);
+}

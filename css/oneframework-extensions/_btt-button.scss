@@ -1,0 +1,60 @@
+// Floating Back To Top Button
+//----------------------------------
+
+@import "../oneframework/scss/defaults";
+
+$base-bttn-button-size:      rem(40) !default;
+$base-bttn-right-position:   rem(40) !default;
+$base-bttn-bottom-position:  rem(40) !default;
+$base-btn-icon-color:        $white !default;
+$base-bttn-bg-color:         $primary-accent-color !default;
+$base-bttn-bg-hover-color:   $secondary-accent-color !default;
+$base-btn-icon-line-height:  rem(38) !default;
+
+// Setup Back to Top Button
+.backtotop-btn {
+  width: $base-bttn-button-size;
+	height: 0;
+	position: fixed;
+	right: $base-bttn-right-position;
+  bottom: $base-bttn-bottom-position;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 9999;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+  @include transition(all,0.3s,ease);
+}
+
+.backtotop-btn.active {
+  height: $base-bttn-button-size;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.backtotop-btn .backtotop-inner {
+  background-color: $base-bttn-bg-color;
+  width: $base-bttn-button-size;
+	height: $base-bttn-button-size;
+  color: $base-btn-icon-color;
+  text-align: center;
+  vertical-align: middle;
+  line-height: $base-btn-icon-line-height;
+  transform: translateZ(0px);
+  position: relative;
+}
+
+.backtotop-btn .backtotop-inner::before {
+  background-color: $base-bttn-bg-hover-color;
+  content: "";
+  @include ab-position(0px,0px,0px,0px,-1);
+  @include scaleY(0);
+  @include transform-origin(50% 0 0);
+  @include transition(transform,0.2s,ease-out);
+}
+
+.backtotop-btn .backtotop-inner:hover::before {
+  @include scaleY(1);
+}

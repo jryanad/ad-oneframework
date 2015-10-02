@@ -1,0 +1,78 @@
+// Typography
+//----------------------------------
+
+@import "defaults";
+
+// Set Headings
+$base-title-h1: rem(40) !default;
+$base-title-h2: rem(34) !default;
+$base-title-h3: rem(26) !default;
+$base-title-h4: rem(22) !default;
+$base-title-h5: rem(20) !default;
+$base-title-h6: rem(18) !default;
+
+$base-title-font-color:     #222 !default;
+$base-title-font-family:    $base-font !default;
+$base-title-font-weight:    normal !default;
+$base-title-font-style:     normal !default;
+$base-title-line-height:    1.4 !default;
+$base-title-top-margin:     .2rem !default;
+$base-title-bottom-margin:  .5rem !default;
+
+// Set Paragraphs
+$base-paragraph-font-color:     $base-font-color !default;
+$base-paragraph-font-size:      rem(16) !default;
+$base-paragraph-font-family:    inherit !default;
+$base-paragraph-margin-bottom:  rem(20) !default;
+$base-paragraph-line-height:    $base-line-height !default;
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  margin-top:     $base-title-top-margin;
+  margin-bottom:  $base-title-bottom-margin;
+  color:          $base-title-font-color;
+  font-family:    $base-title-font-family;
+  font-style:     $base-title-font-style;
+  line-height:    $base-title-line-height;
+}
+
+h1 { font-size: $base-title-h1; }
+h2 { font-size: $base-title-h2; }
+h3 { font-size: $base-title-h3; }
+h4 { font-size: $base-title-h4; }
+h5 { font-size: $base-title-h5; }
+h6 { font-size: $base-title-h6; }
+
+// Paragraphs
+p {
+  margin-bottom:  $base-paragraph-margin-bottom;
+  color:          $base-paragraph-font-color;
+  font-size:      $base-paragraph-font-size;
+  font-family:    $base-paragraph-font-family;
+  line-height:    $base-paragraph-line-height;
+}
+
+// Miscellaneous
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+strong, b { font-weight: 700; }
+em, i     { font-style: italic; }
+
+*::-moz-selection { background: $primary-accent-color; color: $white; }
+*::selection      { background: $primary-accent-color; color: $white; }
+
+// Text Alignment
+.text-left           { text-align: left !important; }
+.text-right          { text-align: right !important; }
+.text-centered       { text-align: center !important; }
+.text-justify  			 { text-align: justify !important; }
+.lrg-text            { font-size: $base-font-size-large !important; }
+.sm-text             { font-size: $base-font-size-small !important; }

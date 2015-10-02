@@ -1,5 +1,18 @@
-/* Simple Tabs
-========================================= */
+// Simple Tabs
+//----------------------------------
+
+@import "defaults";
+
+// Tabs Setup
+$base-tab-class:                ".tabs" !default;
+$base-tabs-color:               darken($lightgrey, 5%) !default;
+$base-tabs-active-color:        $primary-accent-color !default;
+$base-tabs-font-size:           $base-font-size !default;
+$base-tabs-font-color:          $base-font-color !default;
+$base-tabs-height:              ceil($base-font-size * 3) !default;
+$base-tabs-content-bg-color:    $white !default;
+$base-tabs-accent-border-color: $base-tabs-active-color !default;
+$base-tabs-content-font-color:  $base-font-color !default;
 
 ul.tabs {
 	margin: 0;
@@ -22,7 +35,7 @@ ul.tabs li {
 	padding: 0px;
 	float: left;
 	display: block;
-	list-style-type: none !important; 
+	list-style-type: none !important;
 }
 
 ul.tabs li a {
@@ -52,10 +65,10 @@ ul.tabs li a.active {
 }
 
 ul.tabs li:first-child a.active {
-	margin-left: 0; 
+	margin-left: 0;
 }
 
-ul.tabs-content { 
+ul.tabs-content {
 	margin: 0px;
 	padding: 0px;
 	border-left:   1px solid darken($base-tabs-content-bg-color, 10%);
@@ -63,13 +76,13 @@ ul.tabs-content {
 	border-bottom: 1px solid darken($base-tabs-content-bg-color, 10%);
 }
 
-ul.tabs-content > li { 
+ul.tabs-content > li {
 	background-color: $base-tabs-content-bg-color;
 	padding: 20px;
 	display: none;
   list-style-type: none !important
 }
 
-ul.tabs-content > li.active { 
+ul.tabs-content > li.active {
 	display: block !important;
 }

@@ -1,0 +1,275 @@
+// Site Defaults
+//----------------------------------
+
+// Table of Contents
+//----------------------------------
+// 1)  CDN Path
+// 2)  Font Import
+// 3)  Site Branding
+// 4)  Typography
+// 5)  Navbar
+// 6)  Responsive Menu
+// 7)  Blockquotes
+// 8)  Buttons
+// 9)  Social Buttons
+// 10) Forms
+// 11) Tables
+// 12) Pagination
+// 13) Accordion
+// 14) Simple Tabs
+//----------------------------------
+// Extensions
+//----------------------------------
+// 1) Floating Back to Top Button
+//----------------------------------
+
+
+// Add Your Project Path to CDN //
+//----------------------------------
+$cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.ssl.cf2.rackcdn.com/projects/";
+
+// Google Font Import //
+//----------------------------------
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic,800);
+
+// Site Branding Colors //
+//----------------------------------
+$base-body-bg-color:      #ffffff;
+$default-color:           #C2C2C2;
+
+$primary-accent-color:    #254E70;
+$secondary-accent-color:  #1B83B4;
+$tertiary-accent-color:   #ACBEA3;
+
+$base-font:        'Open Sans', sans-serif;
+$base-font-size:   100%;
+$base-font-weight: 400;
+$base-font-color:  #333;
+
+$base-link-color:       $primary-accent-color;
+$base-link-hover-color: lighten($primary-accent-color, 5%);
+
+$base-line-height: 1.5; // 24/16
+
+$base-font-size-large: rem(18);
+$base-font-size-small: rem(12);
+
+// Typography //
+//----------------------------------
+
+// Set Headings
+// $base-title-h1: rem(40);
+// $base-title-h2: rem(34);
+// $base-title-h3: rem(26);
+// $base-title-h4: rem(22);
+// $base-title-h5: rem(20);
+// $base-title-h6: rem(18);
+//
+// $base-title-font-color:     #222;
+// $base-title-font-family:    $base-font;
+// $base-title-font-weight:    normal;
+// $base-title-font-style:     normal;
+// $base-title-line-height:    1.4;
+// $base-title-top-margin:     .2rem;
+// $base-title-bottom-margin:  .5rem;
+//
+// Set Paragraphs
+// $base-paragraph-font-color:     $body-font-color;
+// $base-paragraph-font-size:      rem(16);
+// $base-paragraph-font-family:    inherit;
+// $base-paragraph-margin-bottom:  rem(20);
+// $base-paragraph-line-height:    $base-line-height;
+
+// Navbar //
+//----------------------------------
+
+// Navbar Setup
+// $base-navbar-class:                         ".primary-nav";
+// $base-navbar-height:                        rem(50);
+// $base-navbar-bg-color:                      $primary-accent-color;
+// $base-navbar-bg-hover-color:                darken($primary-accent-color, 10%);
+// $base-navbar-bg-active-color:               $base-nav-bg-hover-color;
+// $base-navbar-link-color:                    $white;
+// $base-navbar-link-padding:                  rem(0 14);
+// $base-navbar-font-size:                     1rem;
+// $base-navbar-font-family:                   $base-font;
+// $base-navbar-font-weight:                   $base-font-weight;
+// $base-navbar-link-text-transform:           uppercase;
+// $base-navbar-line-height:                   $base-nav-height;
+
+// Dropdwon Setup
+// $base-navbar-dropdown-color:                darken($primary-accent-color, 10%);
+// $base-navbar-dropdown-link-color:           $base-navbar-link-color;
+// $base-navbar-dropdown-link-hover-color:     darken($base-navbar-dropdown-color, 5%);
+// $base-navbar-dropdown-link-padding:         rem(10 20);
+// $base-navbar-dropdown-font-size:            rem(13);
+// $base-navbar-dropdown-link-text-transform:  none;
+// $base-navbar-dropdown-box-shadow:           0px 8px 15px rgba(0, 0, 0, 0.1);
+
+// Dropdown Column Setup
+// $base-navbar-dropdown-vertical-padding:     rem(15 0);
+// $base-navbar-dropdown-title-font-size:      $base-navbar-font-size;
+// $base-navbar-dropdown-title-font-weight:    bold;
+
+// Responsive Navbar Setup
+// $base-responsive-navbar-bg-color:           $primary-accent-color;
+// $base-responsive-navbar-height:             rem(40);
+// $base-responsive-navbar-padding:            rem(10);
+
+// Responsive Menu //
+//----------------------------------
+
+// $custom-menu-class:                 ".mm-custom";
+// $custom-menu-page-shadow:           0 0 10px rgba(0, 0, 0, 0.3);
+// $custom-menu-border-color:          rgba(255, 255, 255, 0.2);
+// $custom-menu-background-color:      $primary-accent-color;
+// $custom-menu-emphasized-bg-color:   rgba(0, 0, 0, 0.1);
+// $custom-menu-highlighted-bg-color:  rgba(0, 0, 0, 0.03);
+// $custom-menu-text-color:            rgba(255, 255, 255, 0.9);
+// $custom-menu-dimmed-text-color:     rgba(255, 255, 255, 0.7);
+// $custom-menu-input-bg-color:        rgba(0, 0, 0, 0.1);
+
+// Blockquotes //
+//----------------------------------
+// $base-blockquote-font-color:    lighten($base-font-color, 25%);
+// $base-blockquote-font-size:     rem(16);
+// $base-blockquote-font-style:    italic;
+// $base-blockquote-padding:       rem(10);
+// $base-blockquote-margin-bottom: rem(15);
+// $base-blockquote-border-color:  $primary-accent-color;
+
+// Buttons //
+//----------------------------------
+// $base-btn-class:        ".btn";
+// $base-btn-height:       rem(50);
+// $base-btn-color:        #ddd;
+// $base-btn-font-color:   #222;
+// $base-btn-font-size:    $base-font-size;
+// $base-btn-font-weight:  $base-font-weight;
+// $base-btn-font-family:  $base-font;
+// $base-btn-line-height:  $base-btn-height;
+
+// These are based on the sites accent colors, you can add/remove based on needs
+// name -> pre-defined accent color -> font color
+// $base-btn-accent-colors: ('primary' $primary-accent-color #fff) ('secondary' $secondary-accent-color #fff) ('tertiary' $tertiary-accent-color #fff);
+
+// $base-btn-styles: 'flat' 'rounded' 'pill' 'border' '3d' 'white-border';
+// $base-btn-sizes:  'small' 'medium' 'large' 'jumbo';
+
+// Social Buttons //
+//----------------------------------
+// $facebook-brand-color:          #3b5998;
+// $twitter-brand-color:           #00aced;
+// $google-plus-brand-color:       #dd4b39;
+// $youtube-brand-color:           #bb0000;
+// $linkedin-brand-color:          #007bb6;
+// $yelp-brand-color:              #B4282E;
+// $pinterest-brand-color:         #cb2027;
+
+// Social Button Build
+// $base-social-class:             ".btn-social";
+// $base-social-size:              rem(36);
+// $base-social-icon-color:        $white;
+// $base-social-icon-hover-color:  $base-social-icon-color;
+// $base-social-line-height:       $base-social-size;
+// $base-social-brand-colors:      ('facebook' $facebook-brand-color) ('twitter' $twitter-brand-color) ('google-plus' // $google-plus-brand-color) ('youtube' $youtube-brand-color) ('linkedin' $linkedin-brand-color) ('yelp' // $yelp-brand-color) ('pinterest' $pinterest-brand-color);
+
+// Forms //
+//----------------------------------
+// $base-label-font-color:          $base-font-color;
+// $base-label-font-size:           rem(14);
+// $base-label-font-weight:         normal;
+// $base-label-line-height:         $base-line-height;
+// $base-input-background-color:    $white;
+// $base-input-border-color:        $default-color;
+// $base-input-border-hover-color:  darken($base-input-border-color, 10%);
+// $base-input-border-focus-color:  $primary-accent-color;
+// $base-input-font-color:          $base-font-color;
+// $base-input-font-family:         $base-font;
+// $base-input-margin-bottom:       rem(5);
+// $base-input-padding:             rem(8);
+// $base-input-line-height:         $base-line-height;
+
+// Tables //
+//----------------------------------
+
+// $base-table-bg-color:               $white;
+// $base-table-cell-padding:           rem(8);
+// $base-table-condensed-cell-padding: rem(5);
+// $base-table-bg-accent-color:        $lightgrey;
+// $base-table-border-color:           darken($lightgrey, 10%);
+// $base-table-margin-bottom:          rem(20);
+
+// Pagination //
+//----------------------------------
+
+// $base-pagination-link-color:             $base-link-color;
+// $base-pagination-bg-color:               #fff;
+// $base-pagination-border-color:           #ddd;
+// $base-pagination-margin:                 rem(20 0);
+// $base-pagination-line-height:            $base-line-height;
+// $base-pagination-border-radius:          $base-border-radius;
+//
+// // Pagination Hover
+// $base-pagination-hover-color:            $base-link-hover-color;
+// $base-pagination-hover-bg-color:         $lightgrey;
+// $base-pagination-hover-border-color:     #ddd;
+//
+// // Pagination Active
+// $base-pagination-active-color:           #fff;
+// $base-pagination-active-bg-color:        $primary-accent-color;
+// $base-pagination-active-border-color:    $primary-accent-color;
+//
+// // Pagination Disabled
+// $base-pagination-disabled-color:         #ddd;
+// $base-pagination-disabled-bg-color:      #fff;
+// $base-pagination-disabled-border-color:  #ddd;
+//
+// // Pagination Sizing
+// $base-pagination-sizing-large-vertical-padding:    $base-padding;
+// $base-pagination-sizing-large-horizontal-padding:  rem(16);
+// $base-pagination-sizing-large-font-size:           rem(18);
+// $base-pagination-sizing-large-line-height:         1.33333;
+// $base-pagination-sizing-large-border-radius:       rem(6);
+//
+// $base-pagination-sizing-small-vertical-padding:    $base-padding;
+// $base-pagination-sizing-small-horizontal-padding:  rem(6);
+// $base-pagination-sizing-small-font-size:           rem(12);
+// $base-pagination-sizing-small-line-height:         $base-line-height;
+// $base-pagination-sizing-small-border-radius:       rem(3);
+
+// Accordion //
+//----------------------------------
+// $base-acc-trigger-color:      $secondary-accent-color;
+// $base-acc-trigger-font-color: $white;
+// $base-acc-trigger-font-size:  rem(18);
+// $base-acc-detail-bg-color:    $lightgrey;
+// $base-acc-detail-font-size:   $base-font-size;
+// $base-acc-detail-font-color:  $base-font-color;
+
+// Simple Tabs //
+//----------------------------------
+// $base-tab-class:                ".tabs";
+// $base-tabs-color:               darken($lightgrey, 5%);
+// $base-tabs-active-color:        $primary-accent-color;
+// $base-tabs-font-size:           $base-font-size;
+// $base-tabs-font-color:          $base-font-color;
+// $base-tabs-height:              ceil($base-font-size * 3);
+// $base-tabs-content-bg-color:    $white;
+// $base-tabs-accent-border-color: $base-tabs-active-color;
+// $base-tabs-content-font-color:  $base-font-color;
+
+//----------------------------------
+// One Framework Extensions
+// These are found in the oneframework-extensions
+// directory and can be included by importing selectively
+//----------------------------------
+
+// Back to Top Button
+// $base-bttn-button-size:      rem(40);
+// $base-bttn-right-position:   rem(40);
+// $base-bttn-bottom-position:  rem(40);
+// $base-btn-icon-color:        $white;
+// $base-bttn-bg-color:         $primary-accent-color;
+// $base-bttn-bg-hover-color:   $secondary-accent-color;
+// $base-btn-icon-line-height:  rem(38);

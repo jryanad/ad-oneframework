@@ -1,15 +1,27 @@
-/* Responsive Menu
-========================================= */
+// Responsive Menu
+//----------------------------------
+
+@import "defaults";
+
+// Setup Custom Menu Theme
+$custom-menu-class:                 ".mm-custom" !default;
+$custom-menu-page-shadow:           0 0 10px rgba(0, 0, 0, 0.3) !default;
+$custom-menu-border-color:          rgba(255, 255, 255, 0.2) !default;
+$custom-menu-background-color:      $primary-accent-color !default;
+$custom-menu-emphasized-bg-color:   rgba(0, 0, 0, 0.1) !default;
+$custom-menu-highlighted-bg-color:  rgba(0, 0, 0, 0.03) !default;
+$custom-menu-text-color:            rgba(255, 255, 255, 0.9) !default;
+$custom-menu-dimmed-text-color:     rgba(255, 255, 255, 0.7) !default;
+$custom-menu-input-bg-color:        rgba(0, 0, 0, 0.1) !default;
 
 // Hamerburger Button
-
 #hamburger { display: none;}
 
 @media only screen and (max-width: 1023px) {
 
   #hamburger {
-    width: 70px;
-    height: 45px;
+    width: 20px;
+    height: 20px;
     display: block;
     float: right;
     @include rel-position(2);
@@ -19,18 +31,18 @@
 
   #hamburger::before, #hamburger::after, #hamburger span {
     background: #fff;
-    width: 30px;
-    height: 3px;
+    width: 20px;
+    height: 2px;
     content: "";
     display: block;
     position: absolute;
-    left: 20px;
+    left: 0px;
     @include border-radius(4px);
   }
 
-  #hamburger::before { top: 10px; }
-  #hamburger span    { top: 20px; }
-  #hamburger::after  { top: 30px; }
+  #hamburger::before { top: 5px; }
+  #hamburger span    { top: 10px; }
+  #hamburger::after  { top: 15px; }
 
   #hamburger::before, #hamburger::after, #hamburger span {
     transition-delay: 0.5s;
@@ -40,16 +52,15 @@
   }
 
   html.mm-opening #hamburger::before,
-  html.mm-opening #hamburger::after { top: 20px; }
+  html.mm-opening #hamburger::after { top: 10px; }
 
   html.mm-opening #hamburger span {
     left: -50px;
     opacity: 0;
   }
 
-  html.mm-opening #hamburger::before { transform: rotate(45deg); }
-  html.mm-opening #hamburger::after  { transform: rotate(-45deg); }
-
+  html.mm-opening #hamburger::before { transform: rotate(45deg); -webkit-transform: rotate(45deg); }
+  html.mm-opening #hamburger::after  { transform: rotate(-45deg); -webkit-transform: rotate(-45deg); }
 }
 
 // Fix for Foundation

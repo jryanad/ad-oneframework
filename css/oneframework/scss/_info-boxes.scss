@@ -1,0 +1,46 @@
+// Info Boxes
+//----------------------------------
+
+@import "defaults";
+
+// Info Box Colors
+$base-info-box-defualt-bg-color:  #f7f8fa !default;
+$base-info-box-info-bg-color:     #bfe3f9 !default;
+$base-info-box-success-bg-color:  #dff0d8 !default;
+$base-info-box-warning-bg-color:  #fdebad !default;
+$base-info-box-error-color:       #fecccb !default;
+
+// Info Box Setup
+$base-info-box-class:            ".info-box" !default;
+$base-info-box-margin-bottom:     rem(20) !default;
+$base-info-box-padding:           rem(15) !default;
+$base-info-box-font-size:         rem(16) !default;
+$base-info-close-icon:            "\f00d" !default;
+
+$base-info-box-colors:  ('default' $base-info-box-defualt-bg-color) ('info' $base-info-box-info-bg-color) ('success' $base-info-box-success-bg-color) ('warning' $base-info-box-warning-bg-color) ('error' $base-info-box-error-color) !default;
+
+#{$base-info-box-class} {
+  width: 100%;
+  height: auto;
+  margin-bottom: $base-info-box-margin-bottom;
+  padding: $base-info-box-padding;
+  position: relative;
+
+  p {
+    margin: 0;
+  }
+}
+
+@each $base-info-box-color in $base-info-box-colors {
+  $base-info-box-name:     nth($base-info-box-color, 1);
+  $base-info-box-bg-color: nth($base-info-box-color, 2);
+
+  #{$base-info-box-class}-#{$base-info-box-name} {
+    background-color: $base-info-box-bg-color;
+    border-left: rem(5) solid darken($base-info-box-bg-color, 15%);
+
+    p {
+      color: darken($base-info-box-bg-color, 50%);
+    }
+  }
+}

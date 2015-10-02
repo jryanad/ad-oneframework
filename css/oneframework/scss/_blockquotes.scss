@@ -1,0 +1,47 @@
+// Blockquotes
+//----------------------------------
+
+@import "defaults";
+
+$base-blockquote-font-color:    lighten($base-font-color, 25%) !default;
+$base-blockquote-font-size:     rem(16) !default;
+$base-blockquote-font-style:    italic !default;
+$base-blockquote-padding:       rem(10) !default;
+$base-blockquote-margin-bottom: rem(15) !default;
+$base-blockquote-border-color:  $primary-accent-color !default;
+
+blockquote,
+blockquote.left-side,
+blockquote.right-side {
+	margin-bottom: $base-blockquote-margin-bottom;
+	padding:       $base-blockquote-padding;
+	color:         $base-blockquote-font-color;
+	font-size:     $base-blockquote-font-size;
+	font-style:    $base-blockquote-font-style;
+	text-align:    left;
+	line-height:   $base-line-height;
+}
+
+// Left Aligned Blockquote
+blockquote,
+blockquote.left-side {
+	border-left: 4px solid $base-blockquote-border-color;
+}
+
+//Right Aligned Blockquote
+blockquote.right-side {
+	text-align:   right !important;
+	border-left:  none;
+	border-right: 4px solid $base-blockquote-border-color;
+}
+
+blockquote cite {
+	margin-top: rem(5);
+	color:      lighten($base-blockquote-font-color, 25%);
+	font-size:  rem(12);
+	font-style: normal;
+	display:    block;
+	&:before {
+		content: "- ";
+	}
+}

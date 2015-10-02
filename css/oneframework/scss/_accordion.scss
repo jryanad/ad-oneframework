@@ -1,0 +1,56 @@
+// Accordion
+//----------------------------------
+
+@import "defaults";
+
+$base-acc-trigger-color:      $secondary-accent-color !default;
+$base-acc-trigger-font-color: $white !default;
+$base-acc-trigger-font-size:  rem(18) !default;
+$base-acc-detail-bg-color:    $lightgrey !default;
+$base-acc-detail-font-size:   $base-font-size !default;
+$base-acc-detail-font-color:  $base-font-color !default;
+
+.accordion h4 {
+	margin-bottom: $nomargin;
+}
+
+h4.acc-trigger a {
+  background-color: $base-acc-trigger-color;
+  padding:          rem(15);
+  display:          block;
+  color:            $base-acc-trigger-font-color;
+  font-size:        $base-acc-trigger-font-size;
+  font-weight:      $base-font-weight;
+  @include transition(all,0.3s,ease);
+}
+
+h4.acc-trigger a.open,
+h4.acc-trigger a:hover {
+	background-color: darken($base-acc-trigger-color, 5%);
+}
+
+h4.acc-trigger a span {
+	float: right;
+}
+
+.acc-detail {
+	background-color: $base-acc-detail-bg-color;
+  color:            $base-acc-detail-font-color;
+  font-size:        $base-acc-detail-font-size;
+  padding:          rem(20);
+  @include border(1px,solid, darken($base-acc-detail-bg-color, 10%));
+}
+
+.icon-openClose:before {
+  font-family: "FontAwesome";
+  content:     "\f055";
+  display:     block;
+  font-weight: $base-font-weight;
+  font-size:   rem(24);
+  line-height: $base-line-height ;
+}
+
+h4.acc-trigger a.open .icon-openClose:before{
+  font-family: "FontAwesome";
+  content: "\f056" !important;
+}
