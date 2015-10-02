@@ -3,20 +3,19 @@
 
 @import "defaults";
 
-$base-label-font-color:          $base-font-color !default;
-$base-label-font-size:           rem(14) !default;
-$base-label-font-weight:         normal !default;
-$base-label-line-height:         $base-line-height !default;
-$base-input-background-color:    $white !default;
-$base-input-border-color:        $default-color !default;
-$base-input-border-hover-color:  darken($base-input-border-color, 10%) !default;
-$base-input-border-focus-color:  $primary-accent-color !default;
-$base-input-font-color:          $base-font-color !default;
-$base-input-font-family:         $base-font !default;
-$base-input-margin-bottom:       rem(5) !default;
-$base-input-padding:             rem(8) !default;
-$base-input-line-height:         $base-line-height !default;
-
+$base-label-font-color: $base-font-color !default;
+$base-label-font-size: rem(14) !default;
+$base-label-font-weight: normal !default;
+$base-label-line-height: $base-line-height !default;
+$base-input-background-color: $white !default;
+$base-input-border-color: $default-color !default;
+$base-input-border-hover-color: darken($base-input-border-color, 10%) !default;
+$base-input-border-focus-color: $primary-accent-color !default;
+$base-input-font-color: $base-font-color !default;
+$base-input-font-family: $base-font !default;
+$base-input-margin-bottom: rem(5) !default;
+$base-input-padding: rem(8) !default;
+$base-input-line-height: $base-line-height !default;
 
 fieldset {
   background-color: lighten($default-color, 10%);
@@ -43,7 +42,7 @@ input[type="radio"] + label,
 input[type="checkbox"] + label {
   margin-left: rem(7);
   margin-right: rem(14);
-  margin-bottom: 0px;
+  margin-bottom: 0;
   vertical-align: baseline;
   display: inline-block;
 }
@@ -53,7 +52,8 @@ input[type="email"],
 input[type="password"],
 input[type="tel"],
 input[type="date"],
-select, textarea {
+select,
+textarea {
   background-color: $base-input-background-color;
   width: 100%;
   margin-bottom: $base-input-margin-bottom;
@@ -65,18 +65,15 @@ select, textarea {
   @include border(1px, solid, $base-input-border-color);
   @include transition(border-color, 0.3s, ease);
   -webkit-appearance: none;
-
-	&:hover {
+  &:hover {
     border-color: darken($base-input-border-color, 10%);
-	}
-
-	&:focus {
+  }
+  &:focus {
     border-color: $base-input-border-focus-color;
     box-shadow: 0 0 5px rgba($base-input-border-focus-color, 0.4);
     outline: none;
-	}
-
-	@include placeholder;
+  }
+  @include placeholder;
 }
 
 textarea {
