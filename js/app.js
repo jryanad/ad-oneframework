@@ -3,17 +3,6 @@
 $(document).ready(function() {
 
   /*-------------------------------------------------------------------------*/
-  /*  ScrollTo Top Button
-  /*-------------------------------------------------------------------------*/
-
-  $('.gototop').click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 800);
-    return false;
-  });
-
-  /*-------------------------------------------------------------------------*/
   /*  jQuery Dropdown Navigation
   /*-------------------------------------------------------------------------*/
 
@@ -48,13 +37,6 @@ $(document).ready(function() {
   $('li.column-5 > a').removeAttr('href').addClass("column-title");
 
   /*-------------------------------------------------------------------------*/
-  /*  To Do:
-  /*  Figure out fix for fadeIn and fadeOut for level-2 dropdown.
-  /*  Current CSS3 solution doesn't play nice in Google Crome if
-  /*  { display: none; } isn't set.
-  /*-------------------------------------------------------------------------*/
-
-  /*-------------------------------------------------------------------------*/
   /*  Responsive Navigation Menu
   /*-------------------------------------------------------------------------*/
 
@@ -81,5 +63,40 @@ $(document).ready(function() {
   /*-------------------------------------------------------------------------*/
 
   $('#main-content p, #main-content ul li').fontResizer({fontSet:16,setFontOn: 'OFF'});
+
+  /*-----------------------------------------------------------------------------------*/
+  /*  Scroll To Top Button
+  /*-----------------------------------------------------------------------------------*/
+
+  function initGoToTop() {
+
+  	// fade in #top_button
+  	$(function () {
+  		$(window).scroll(function () {
+
+  			if ($(this).scrollTop() > 100) {
+  				$('.backtotop-btn').addClass("active");
+  			}
+        else {
+  				$('.backtotop-btn').removeClass("active");
+  			}
+  		});
+
+  		// scroll body to 0px on click
+  		$('.backtotop-btn').click(function () {
+
+  			$('body,html').animate({
+  				scrollTop: 0
+  			},  700);
+  			return false;
+  		});
+  	});
+
+  	if ($(window).scrollTop() > 100) {
+  		$('.backtotop-btn').addClass("active");
+    }
+  }
+
+  initGoToTop();
 
 });
