@@ -89,37 +89,40 @@ $base-font-size-small: rem(12);
 //----------------------------------
 
 // Navbar Setup
-// $base-navbar-class:                         ".primary-nav";
-// $base-navbar-height:                        rem(50);
-// $base-navbar-bg-color:                      $primary-accent-color;
-// $base-navbar-bg-hover-color:                darken($primary-accent-color, 10%);
-// $base-navbar-bg-active-color:               $base-nav-bg-hover-color;
-// $base-navbar-link-color:                    $white;
-// $base-navbar-link-padding:                  rem(0 14);
-// $base-navbar-font-size:                     1rem;
-// $base-navbar-font-family:                   $base-font;
-// $base-navbar-font-weight:                   $base-font-weight;
-// $base-navbar-link-text-transform:           uppercase;
-// $base-navbar-line-height:                   $base-nav-height;
+// $base-navbar-class:                           ".navbar";
+// $base-navbar-height:                          rem(50);
+// $base-navbar-bg-color:                        $primary-accent-color;
+// $base-navbar-bg-hover-color:                  darken($primary-accent-color, 10%);
+// $base-navbar-bg-active-color:                 $base-navbar-bg-hover-color;
+// $base-navbar-link-color:                      $white;
+// $base-navbar-link-padding:                    rem(0 14);
+// $base-navbar-font-size:                       1rem;
+// $base-navbar-font-family:                     $base-font;
+// $base-navbar-font-weight:                     $base-font-weight;
+// $base-navbar-link-text-transform:             uppercase;
+// $base-navbar-line-height:                     $base-navbar-height;
 
 // Dropdwon Setup
-// $base-navbar-dropdown-color:                darken($primary-accent-color, 10%);
-// $base-navbar-dropdown-link-color:           $base-navbar-link-color;
-// $base-navbar-dropdown-link-hover-color:     darken($base-navbar-dropdown-color, 5%);
-// $base-navbar-dropdown-link-padding:         rem(10 20);
-// $base-navbar-dropdown-font-size:            rem(13);
-// $base-navbar-dropdown-link-text-transform:  none;
-// $base-navbar-dropdown-box-shadow:           0px 8px 15px rgba(0, 0, 0, 0.1);
+// $base-navbar-dropdown-color:                  darken($primary-accent-color, 10%);
+// $base-navbar-dropdown-link-color:             $base-navbar-link-color;
+// $base-navbar-dropdown-link-hover-color:       darken($base-navbar-dropdown-color, 5%);
+// $base-navbar-dropdown-link-padding:           rem(10 40 10 14);
+// $base-navbar-dropdown-font-size:              rem(14);
+// $base-navbar-dropdown-link-text-transform:    none;
+// $base-navbar-dropdown-box-shadow:             0px 8px 15px rgba(0, 0, 0, 0.1);
 
 // Dropdown Column Setup
-// $base-navbar-dropdown-vertical-padding:     rem(15 0);
-// $base-navbar-dropdown-title-font-size:      $base-navbar-font-size;
-// $base-navbar-dropdown-title-font-weight:    bold;
+// $base-navbar-dropdown-vertical-padding:       rem(15 0);
+// $base-navbar-dropdown-title-font-size:        $base-navbar-font-size;
+// $base-navbar-dropdown-title-font-weight:      bold;
+// $base-navbar-dropdown-title-border-color:     1px solid lighten($base-navbar-dropdown-color, 5%);
+// $base-navbar-dropdown-column-link-font-size:  rem(13);
+// $base-navbar-dropdown-column-link-padding:    rem(10 14);
 
 // Responsive Navbar Setup
-// $base-responsive-navbar-bg-color:           $primary-accent-color;
-// $base-responsive-navbar-height:             rem(40);
-// $base-responsive-navbar-padding:            rem(10);
+// $base-responsive-navbar-bg-color:             $primary-accent-color;
+// $base-responsive-navbar-height:               rem(40);
+// $base-responsive-navbar-padding:              rem(10);
 
 // Responsive Menu //
 //----------------------------------
