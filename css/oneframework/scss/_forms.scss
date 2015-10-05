@@ -13,7 +13,7 @@ $base-input-border-hover-color: darken($base-input-border-color, 10%) !default;
 $base-input-border-focus-color: $primary-accent-color !default;
 $base-input-font-color: $base-font-color !default;
 $base-input-font-family: $base-font !default;
-$base-input-margin-bottom: rem(5) !default;
+$base-input-margin-bottom: rem(15) !default;
 $base-input-padding: rem(8) !default;
 $base-input-line-height: $base-line-height !default;
 
@@ -78,6 +78,7 @@ textarea {
 
 textarea {
   min-height: 200px;
+  margin-bottom: $base-input-margin-bottom !important;
   resize: vertical;
 }
 
