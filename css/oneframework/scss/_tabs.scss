@@ -18,11 +18,11 @@ $base-tabs-accent-border-color: $base-tabs-active-color !default;
 $base-tabs-content-font-color:  $base-font-color !default;
 
 ul.tabs {
-.DS_Storemargin: 0;
-.DS_Storepadding: 0px;
-.DS_Storefont-size: 0; // Collapse Inline Spacing
-.DS_Storedisplay: block;
-.DS_Storeborder-bottom: 3px solid $base-tabs-accent-border-color;
+  margin: 0;
+  padding: 0px;
+  font-size: 0; // Collapse Inline Spacing
+  display: block;
+  border-bottom: 3px solid $base-tabs-accent-border-color;
 }
 
 ul.tabs li:first-child {
