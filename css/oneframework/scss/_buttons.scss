@@ -25,6 +25,7 @@ $base-btn-sizes:  'small' 'medium' 'large' 'jumbo' !default;
 $base-btn-flat-build: false;
 $base-btn-rounded-build: false;
 $base-btn-pill-build: false;
+$base-btn-white-border-build: false;
 $base-btn-border-build: false;
 $base-btn-3d-build: false;
 
@@ -166,8 +167,8 @@ input#{$base-btn-class}, button#{$base-btn-class} {
 }
 
 // White Border Button Build
-@if $base-btn-flat-build {
-  #{$base-btn-class}-white-border {
+@if $base-btn-white-border-build {
+  #{$base-btn-class}-border-white {
     background: none;
     color: $white;
     line-height: $base-btn-height - rem(4);
@@ -295,7 +296,7 @@ input#{$base-btn-class}, button#{$base-btn-class} {
     #{$base-btn-class}-border-#{$base-btn-accent-name} {
       background: none;
       color: $base-btn-accent-bg-color;
-      line-height: ceil($base-btn-height - 4);
+      line-height: $base-btn-height - rem(4);
       @include box-shadow(none);
       @include border(2px, solid, $base-btn-accent-bg-color);
 
