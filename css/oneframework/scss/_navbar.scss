@@ -187,6 +187,7 @@ nav#{$base-navbar-class} ul > li[class*="columns"] {
       }
 
       > ul {
+        min-width: 100%;
         position: static;
         box-shadow: none;
 
