@@ -11,13 +11,14 @@ $base-title-h4: rem(22) !default;
 $base-title-h5: rem(20) !default;
 $base-title-h6: rem(18) !default;
 
-$base-title-font-color:     #222 !default;
-$base-title-font-family:    $base-font !default;
-$base-title-font-weight:    normal !default;
-$base-title-font-style:     normal !default;
-$base-title-line-height:    1.4 !default;
-$base-title-top-margin:     .2rem !default;
-$base-title-bottom-margin:  .5rem !default;
+$base-title-font-color:      #222 !default;
+$base-title-font-family:     $base-font !default;
+$base-title-font-weight:     normal !default;
+$base-title-font-style:      normal !default;
+$base-title-text-transform:  capitalize !default;
+$base-title-line-height:     1.4 !default;
+$base-title-top-margin:      .2rem !default;
+$base-title-bottom-margin:   .5rem !default;
 
 // Set Paragraphs
 $base-paragraph-font-color:     $base-font-color !default;
@@ -33,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   color:          $base-title-font-color;
   font-family:    $base-title-font-family;
   font-style:     $base-title-font-style;
+  text-transform: $base-title-text-transform;
   line-height:    $base-title-line-height;
 }
 
