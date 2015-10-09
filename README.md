@@ -36,7 +36,12 @@ Also, there are 2 files in *Components* for tabs.js & accordion.js, just add the
 
 # Changelog
 
-### October 2nd, 2015
+#### October 8th, 2015 // 2.0.1
+
+* Updated: Moved Social Branding vars into defaults so they can be used throughout the framework
+* Fixed: Reset min-width on unordered lists within the columns of the mega menu 
+
+#### October 2nd, 2015 // 2.0
 
 * New: REM to Pixel Conversion
 * New: Info Boxes to use for system notifications
