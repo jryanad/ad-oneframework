@@ -1,4 +1,4 @@
-// Site JS Goes Here
+// Site JS Goes Here //
 
 $(document).ready(function() {
 
