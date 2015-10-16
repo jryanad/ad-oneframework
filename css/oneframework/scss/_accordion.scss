@@ -1,0 +1,83 @@
+// Accordion
+//----------------------------------
+
+@import "defaults";
+
+// Setup Accordion Trigger
+$base-acc-trigger-color:                 $secondary-accent-color !default;
+$base-acc-trigger-open-and-hover-color:  darken($base-acc-trigger-color, 5%) !default;
+$base-acc-trigger-font-color:            $white !default;
+$base-acc-trigger-font-size:             rem(18) !default;
+$base-acc-trigger-padding:               rem(15 30 15 15) !default;
+
+// Setup Accordion Trigger Icon
+$base-acc-trigger-icon-width:            rem(30) !default;
+$base-acc-trigger-icon-height:           $base-acc-trigger-icon-width !default;
+$base-acc-trigger-icon-line-height:      $base-acc-trigger-icon-height !default;
+$base-acc-trigger-icon-margin-top:       (($base-acc-trigger-icon-height / 2) * -1) !default;
+$base-acc-trigger-icon-font-size:        rem(20) !default;
+$base-acc-trigger-icon-font-family:      "FontAwesome" !default;
+$base-acc-trigger-icon-closed:           "\f055" !default;
+$base-acc-trigger-icon-open:             "\f056" !default;
+
+// Setup Accordion Detail
+$base-acc-detail-bg-color:              $lightgrey !default;
+$base-acc-detail-font-size:             $base-font-size !default;
+$base-acc-detail-font-color:            $base-font-color !default;
+$base-acc-detail-padding:               rem(20) !default;
+$base-acc-detail-border:                1px solid darken($base-acc-detail-bg-color, 10%) !default;
+
+h4.acc-trigger {
+  margin-top: rem(5);
+  margin-bottom: 0;
+  position: relative;
+}
+
+h4.acc-trigger a {
+  background-color: $base-acc-trigger-color;
+  padding: $base-acc-trigger-padding;
+  display: block;
+  color: $base-acc-trigger-font-color;
+  font-size: $base-acc-trigger-font-size;
+  font-weight: $base-font-weight;
+  @include transition(all,0.3s,ease);
+}
+
+h4.acc-trigger a.open,
+h4.acc-trigger a:hover {
+  background-color: $base-acc-trigger-open-and-hover-color;
+}
+
+h4.acc-trigger a span {
+  width: $base-acc-trigger-icon-width;
+  height: $base-acc-trigger-icon-height;
+  margin-top: $base-acc-trigger-icon-margin-top;
+  text-align: center;
+  display: block;
+  line-height: $base-acc-trigger-icon-line-height;
+  position: absolute;
+  top: 50%;
+  right: rem(5);
+}
+
+.icon-openClose:before {
+  content: $base-acc-trigger-icon-closed;
+  font-size: $base-acc-trigger-icon-font-size;
+  font-family: $base-acc-trigger-icon-font-family;
+  display: block;
+}
+
+h4.acc-trigger a.open .icon-openClose:before{
+  font-family: $base-acc-trigger-icon-font-family;
+  content: $base-acc-trigger-icon-open !important;
+}
+
+.acc-detail {
+  background-color: $base-acc-detail-bg-color;
+  color: $base-acc-detail-font-color;
+  font-size: $base-acc-detail-font-size;
+  padding: $base-acc-detail-padding;
+  border-left: $base-acc-detail-border;
+  border-right: $base-acc-detail-border;
+  border-bottom: $base-acc-detail-border;
+}

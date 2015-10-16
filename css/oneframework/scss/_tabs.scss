@@ -1,0 +1,81 @@
+// Simple Tabs
+//----------------------------------
+
+@import "defaults";
+
+// Tabs Setup
+$base-tab-class:                ".tabs" !default;
+$base-tabs-color:               darken($lightgrey, 5%) !default;
+$base-tabs-active-color:        $primary-accent-color !default;
+$base-tabs-font-size:           rem(16) !default;
+$base-tabs-font-color:          $base-font-color !default;
+$base-tabs-width:               auto !default;
+$base-tabs-height:              ($base-tabs-font-size * 3) !default;
+$base-tabs-horizontal-padding:  rem(20) !default;
+$base-tabs-content-bg-color:    $white !default;
+$base-tabs-content-padding:     rem(20) !default;
+$base-tabs-accent-border-color: $base-tabs-active-color !default;
+$base-tabs-content-font-color:  $base-font-color !default;
+
+ul.tabs {
+  margin: 0;
+  padding: 0px;
+  font-size: 0; // Collapse Inline Spacing
+  display: block;
+  border-bottom: 3px solid $base-tabs-accent-border-color;
+}
+
+ul.tabs li:first-child {
+  margin: 0;
+}
+
+ul.tabs li {
+  margin-left: rem(2);
+  padding: 0;
+  display: inline-block;
+  list-style-type: none !important;
+}
+
+ul.tabs li a {
+  background-color: $base-tabs-color;
+  width: $base-tabs-width;
+  height: $base-tabs-height;
+  margin: 0;
+  padding: 0 $base-tabs-horizontal-padding;
+  font-size: $base-tabs-font-size;
+  color: $base-tabs-font-color;
+  text-align: center;
+  text-decoration: none;
+  line-height: $base-tabs-height;
+  display: block;
+  @include transition(all, 0.3s, ease);
+}
+
+ul.tabs li a:hover {
+  background-color: $base-tabs-active-color;
+  color: $white;
+}
+
+ul.tabs li a.active {
+  background-color: $base-tabs-active-color;
+  color: $white;
+}
+
+ul.tabs-content {
+  margin: 0px;
+  padding: 0px;
+  border-left:   1px solid darken($base-tabs-content-bg-color, 10%);
+  border-right:  1px solid darken($base-tabs-content-bg-color, 10%);
+  border-bottom: 1px solid darken($base-tabs-content-bg-color, 10%);
+}
+
+ul.tabs-content > li {
+  background-color: $base-tabs-content-bg-color;
+  padding: $base-tabs-content-padding;
+  display: none;
+  list-style-type: none !important;
+}
+
+ul.tabs-content > li.active {
+  display: block !important;
+}

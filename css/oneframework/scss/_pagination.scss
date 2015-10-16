@@ -1,0 +1,153 @@
+// Pagination
+// TODO: Make another pagination style
+//----------------------------------
+
+@import "defaults";
+
+// Setup Pagination
+$base-pagination-link-color:             $base-link-color !default;
+$base-pagination-bg-color:               #fff !default;
+$base-pagination-border-color:           #ddd !default;
+$base-pagination-margin:                 rem(20 0) !default;
+$base-pagination-line-height:            $base-line-height !default;
+$base-pagination-border-radius:          $base-border-radius !default;
+
+// Pagination Hover
+$base-pagination-hover-color:            $base-link-hover-color !default;
+$base-pagination-hover-bg-color:         $lightgrey !default;
+$base-pagination-hover-border-color:     #ddd !default;
+
+// Pagination Active
+$base-pagination-active-color:           #fff !default;
+$base-pagination-active-bg-color:        $primary-accent-color !default;
+$base-pagination-active-border-color:    $primary-accent-color !default;
+
+// Pagination Disabled
+$base-pagination-disabled-color:         #ddd !default;
+$base-pagination-disabled-bg-color:      #fff !default;
+$base-pagination-disabled-border-color:  #ddd !default;
+
+// Pagination Sizing
+$base-pagination-sizing-large-vertical-padding:    $base-padding !default;
+$base-pagination-sizing-large-horizontal-padding:  rem(16) !default;
+$base-pagination-sizing-large-font-size:           rem(18) !default;
+$base-pagination-sizing-large-line-height:         1.33333 !default;
+$base-pagination-sizing-large-border-radius:       rem(6) !default;
+
+$base-pagination-sizing-small-vertical-padding:    $base-padding !default;
+$base-pagination-sizing-small-horizontal-padding:  rem(6) !default;
+$base-pagination-sizing-small-font-size:           rem(12) !default;
+$base-pagination-sizing-small-line-height:         $base-line-height !default;
+$base-pagination-sizing-small-border-radius:       rem(3) !default;
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: $base-pagination-margin;
+  border-radius: $base-pagination-border-radius;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      background-color: $base-pagination-bg-color;
+      margin-left: -1px;
+      padding: rem(6 12);
+      color: $base-pagination-link-color;
+      text-decoration: none;
+      line-height: $base-pagination-line-height;
+      float: left;
+      position: relative;
+      border: 1px solid $base-pagination-border-color;
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        @include border-left-radius($base-pagination-line-height);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-right-radius($base-pagination-line-height);
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      background-color: $base-pagination-hover-bg-color;
+      color: $base-pagination-hover-color;
+      border-color: $base-pagination-hover-border-color;
+      z-index: 3;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $base-pagination-active-bg-color;
+      color: $base-pagination-active-color;
+      border-color: $base-pagination-active-border-color;
+      z-index: 2;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: $base-pagination-disabled-color;
+      background-color: $base-pagination-disabled-bg-color;
+      border-color: $base-pagination-disabled-border-color;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Setup Pagination Sizing
+// --------------------------------------------------
+@mixin pagination-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  > li {
+    > a,
+    > span {
+      padding: $padding-vertical $padding-horizontal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+    &:first-child {
+      > a,
+      > span {
+        @include border-left-radius($border-radius);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-right-radius($border-radius);
+      }
+    }
+  }
+}
+
+// Sizing
+// --------------------------------------------------
+
+// Large
+.pagination-lg {
+  @include pagination-size($base-pagination-sizing-large-vertical-padding, $base-pagination-sizing-large-horizontal-padding, $base-pagination-sizing-large-font-size, $base-pagination-sizing-large-line-height, $base-pagination-sizing-large-border-radius);
+}
+
+// Small
+.pagination-sm {
+  @include pagination-size($base-pagination-sizing-small-vertical-padding, $base-pagination-sizing-small-horizontal-padding, $base-pagination-sizing-small-font-size, $base-pagination-sizing-small-line-height, $base-pagination-sizing-small-border-radius);
+}

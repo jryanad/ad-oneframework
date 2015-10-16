@@ -1,0 +1,256 @@
+// Navbar
+//----------------------------------
+
+@import "defaults";
+
+// Navbar Setup
+$base-navbar-class:                           ".navbar" !default;
+$base-navbar-height:                          rem(50) !default;
+$base-navbar-bg-color:                        $primary-accent-color !default;
+$base-navbar-bg-hover-color:                  darken($primary-accent-color, 10%) !default;
+$base-navbar-bg-active-color:                 $base-navbar-bg-hover-color !default;
+$base-navbar-link-color:                      $white !default;
+$base-navbar-link-padding:                    rem(0 14) !default;
+$base-navbar-font-size:                       1rem !default;
+$base-navbar-font-family:                     $base-font !default;
+$base-navbar-font-weight:                     $base-font-weight !default;
+$base-navbar-link-text-transform:             uppercase !default;
+$base-navbar-line-height:                     $base-navbar-height !default;
+
+// Dropdwon Setup
+$base-navbar-dropdown-color:                  darken($primary-accent-color, 10%) !default;
+$base-navbar-dropdown-link-color:             $base-navbar-link-color !default;
+$base-navbar-dropdown-link-hover-color:       darken($base-navbar-dropdown-color, 5%) !default;
+$base-navbar-dropdown-link-padding:           rem(10 40 10 14) !default;
+$base-navbar-dropdown-font-size:              rem(14) !default;
+$base-navbar-dropdown-link-text-transform:    none !default;
+$base-navbar-dropdown-box-shadow:             0px 8px 15px rgba(0, 0, 0, 0.1) !default;
+
+// Dropdown Column Setup
+$base-navbar-dropdown-vertical-padding:       rem(15 0) !default;
+$base-navbar-dropdown-title-font-size:        $base-navbar-font-size !default;
+$base-navbar-dropdown-title-font-weight:      bold !default;
+$base-navbar-dropdown-title-border-color:     1px solid lighten($base-navbar-dropdown-color, 5%) !default;
+$base-navbar-dropdown-column-link-font-size:  rem(13) !default;
+$base-navbar-dropdown-column-link-padding:    rem(10 14) !default;
+
+// Responsive Navbar Setup
+$base-responsive-navbar-bg-color:             $primary-accent-color !default;
+$base-responsive-navbar-height:               rem(40) !default;
+$base-responsive-navbar-padding:              rem(10) !default;
+
+
+@media only screen and(max-width: 1023px) {
+
+  .navbar-wrapper { @include hidden; }
+
+  .responsive-navbar {
+    background-color: $base-responsive-navbar-bg-color;
+    width: 100%;
+    height: $base-responsive-navbar-height;
+    margin: 0px;
+    padding: $base-responsive-navbar-padding;
+    @include fx-position(0,auto,auto,0,9999);
+    display: block;
+  }
+}
+
+.navbar-wrapper {
+  background-color: $base-navbar-bg-color;
+  width: 100%;
+}
+
+nav#{$base-navbar-class} {
+  display: inline-block;
+  vertical-align: middle;
+  vertical-align: -webkit-baseline-middle;
+}
+
+nav#{$base-navbar-class} ul:before,
+nav#{$base-navbar-class} ul:after {
+  @include clearfix();
+}
+
+nav#{$base-navbar-class} ul {
+  margin: $nomargin;
+  padding: $nopadding;
+  list-style-type: none;
+
+  > li {
+    float: left;
+    position: relative;
+
+    a {
+      width: auto;
+      height: auto;
+      margin: $nomargin;
+      padding: $base-navbar-link-padding;
+      color: $base-navbar-link-color;
+      font-size: $base-navbar-font-size;
+      font-family: $base-navbar-font-family;
+      font-weight: $base-navbar-font-weight;
+      text-decoration: none;
+      text-transform: $base-navbar-link-text-transform;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      @include transition(all, 0.3s, ease);
+      line-height: $base-navbar-height;
+    }
+
+    &:hover a {
+      background-color: $base-navbar-bg-hover-color;
+    }
+    &:active a,
+    &:focus a,
+    &.active a {
+      background-color: $base-navbar-bg-active-color;
+    }
+
+    // Default Dropdwon Config
+    > ul {
+      background-color: $base-navbar-dropdown-color;
+      min-width: rem(200);
+      height: auto;
+      margin: 0px;
+      padding: 0px;
+      position: absolute;
+      top: auto;
+      left: auto;
+      z-index: 9999;
+      @include box-shadow($base-navbar-dropdown-box-shadow);
+
+      > li {
+        float: none;
+        display: block;
+        position: relative;
+
+        a {
+          padding: $base-navbar-dropdown-link-padding;
+          color: $base-navbar-dropdown-link-color;
+          font-size: $base-navbar-dropdown-font-size;
+          text-transform: $base-navbar-dropdown-link-text-transform;
+          white-space: nowrap;
+          line-height: $base-line-height;
+
+          &:hover {
+            background-color: $base-navbar-dropdown-link-hover-color;
+          }
+        }
+
+        > ul {
+          min-width: rem(200);
+          position: absolute;
+          display: block;
+          top: 0px;
+          left: 100%;
+          @include box-shadow($base-navbar-dropdown-box-shadow);
+
+          li {
+            float: none;
+            display: block;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Column Dropdown Config
+nav#{$base-navbar-class} ul > li[class*="columns"] {
+  position: static;
+
+  > ul {
+      width: 100%;
+      min-width: rem(200);
+      padding: $base-navbar-dropdown-vertical-padding;
+      left: 0px;
+      right: 0px;
+      font-size: 0px; // Inline-Block fix for column rendering
+      line-height: 0px;
+
+    > li[class*="column"] {
+        padding: 0 15px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+
+      a.column-title {
+        background-color: transparent !important;
+        padding: $base-navbar-dropdown-column-link-padding;
+        font-size: $base-navbar-dropdown-title-font-size;
+        font-weight: $base-navbar-dropdown-title-font-weight;
+        border-bottom: $base-navbar-dropdown-title-border-color;
+        cursor: text;
+      }
+
+      > ul {
+        min-width: 100%;
+        position: static;
+        box-shadow: none;
+
+        li a {
+          padding: $base-navbar-dropdown-column-link-padding;
+          font-size: $base-navbar-dropdown-column-link-font-size;
+          white-space: normal;
+        }
+      }
+    }
+  }
+}
+
+// Dropdown Column Widths
+nav#{$base-navbar-class} ul li[class*="columns"] li.column-2 { width: 50%; }
+nav#{$base-navbar-class} ul li[class*="columns"] li.column-3 { width: 33.3333%; }
+nav#{$base-navbar-class} ul li[class*="columns"] li.column-4 { width: 25%; }
+nav#{$base-navbar-class} ul li[class*="columns"] li.column-5 { width: 20%; }
+
+// Flyout Arrow
+.nav-arrow {
+  width: rem(20);
+  height: rem(20);
+  margin-top: rem(-10);
+  text-align: center;
+  line-height: rem(20);
+  position: absolute;
+  right: rem(5);
+  top: 50%;
+  display: none;
+}
+
+.nav-arrow:before {
+  content: "\f105";
+  font-family: fontawesome;
+  color: $base-navbar-dropdown-link-color;
+}
+
+// Fix for Navigation Conflict with Foundation
+nav#{$base-navbar-class} [class*=column]+[class*=column]:last-child { float: none !important; }
+
+// Fix flickering issue on page load
+nav#{$base-navbar-class} > ul > li > ul {
+  visibility: hidden;
+  opacity: 0;
+}
+
+// Dropdown Transitions
+nav#{$base-navbar-class} li:hover > ul  {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s,visibility 0.3s;
+}
+
+// Flyout Menu Transitions
+nav#{$base-navbar-class} li:not(.has-columns) ul > li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s,visibility 0.3s;
+}
+
+nav#{$base-navbar-class} li:not(.has-columns) ul > li > ul {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s,visibility 0.1s;
+}

@@ -1,21 +1,18 @@
-/* Grid
-========================================= */
+// Forms
+//----------------------------------
 
 // Default Grid Settings
-
-$base-grid-max-width: 75em;
-$base-grid-gutter: 1.875em;
-$base-grid-columns: 12;
+$base-grid-max-width: 75em !default;
+$base-grid-gutter: 1.875em !default;
+$base-grid-columns: 12 !default;
 
 // Default Media Queries
-
-$base-screen-xs: 30em;
-$base-screen-sm: 48em;
-$base-screen-md: 64em;
-$base-screen-lg: $base-grid-max-width;
+$base-screen-xs: 30em !default;
+$base-screen-sm: 48em !default;
+$base-screen-md: 64em !default;
+$base-screen-lg: $base-grid-max-width !default;
 
 // Set Max Screen Width for Media Queries
-
 $breakpoint-xs-max: ($base-screen-xs - 0.1) !default;
 $breakpoint-sm-max: ($base-screen-sm - 0.1) !default;
 $breakpoint-md-max: ($base-screen-md - 0.1) !default;

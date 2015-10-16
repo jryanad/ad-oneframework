@@ -1,0 +1,51 @@
+// Functions for One Framework
+//----------------------------------
+
+// Pixel to Rem Converter
+// Based on various conversion functions
+// found around the internets.
+//----------------------------------
+
+// Root Value
+$baseline: 16px !default;
+
+// Strip Unit
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+// Convert PX to REM
+@function convert-rem($values, $root-value: $baseline) {
+  $value: parseInt($values) / parseInt($root-value) * 1rem;
+  @if ($value == 0rem) {
+    $value: 0; // Make Unitless
+  }
+  @return $value;
+}
+
+// REM
+@function rem($values, $root-value: $baseline) {
+  $max: length($values);
+
+  @if $max == 1 {
+    @return convert-rem(nth($values, 1), $root-value);
+  }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-rem(nth($values, $i), $root-value));
+  }
+  @return $remValues;
+}
+
+// Alternate Colors
+//----------------------------------
+
+@function set-alt-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  }
+  @else {
+    @return #fff;
+  }
+}
