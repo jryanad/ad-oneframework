@@ -50,6 +50,9 @@ $(document).ready(function() {
     offCanvas: {
       position: "right"
     },
+    dragClose: {
+      close: true
+    },
     classes: "mm-custom",
     searchfield: true
   });
