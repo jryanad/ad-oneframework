@@ -8,7 +8,7 @@ $base-bttn-right-position:   rem(40) !default;
 $base-bttn-bottom-position:  rem(40) !default;
 $base-btn-icon-color:        $white !default;
 $base-bttn-bg-color:         $primary-accent-color !default;
-$base-bttn-bg-hover-color:   $secondary-accent-color !default;
+$base-bttn-bg-hover-color:   darken($primary-accent-color, 5%) !default;
 $base-btn-icon-line-height:  rem(38) !default;
 
 // Setup Back to Top Button
