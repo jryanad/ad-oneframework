@@ -4,11 +4,11 @@
 @import "defaults";
 
 // Info Box Colors
-$base-info-box-defualt-bg-color:  #f7f8fa !default;
-$base-info-box-info-bg-color:     #bfe3f9 !default;
-$base-info-box-success-bg-color:  #dff0d8 !default;
-$base-info-box-warning-bg-color:  #fdebad !default;
-$base-info-box-error-color:       #fecccb !default;
+$base-info-box-defualt-bg-color:  $info-default !default;
+$base-info-box-info-bg-color:     $info-info !default;
+$base-info-box-success-bg-color:  $info-success !default;
+$base-info-box-warning-bg-color:  $info-warning !default;
+$base-info-box-error-color:       $info-error !default;
 
 // Info Box Setup
 $base-info-box-class:            ".info-box" !default;
