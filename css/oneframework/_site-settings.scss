@@ -8,24 +8,24 @@
 
 // Table of Contents
 //----------------------------------
-// 1)  CDN Path
-// 2)  Font Import
-// 3)  Site Branding
-// 4)  Typography
-// 5)  Navbar
-// 6)  Responsive Menu
-// 7)  Blockquotes
-// 8)  Buttons
-// 9)  Social Buttons
-// 10) Forms
-// 11) Tables
-// 12) Pagination
-// 13) Accordion
-// 14) Simple Tabs
+// CDN Path
+// Site Branding
+// Typography
+// Navbar
+// Responsive Menu
+// Blockquotes
+// Buttons
+// Social Buttons
+// Info Boxes
+// Forms
+// Tables
+// Pagination
+// Accordion
+// Simple Tabs
 //----------------------------------
 // Extensions
 //----------------------------------
-// 1) Floating Back to Top Button
+// Floating Back to Top Button
 //----------------------------------
 
 
@@ -33,31 +33,36 @@
 //----------------------------------
 $cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.ssl.cf2.rackcdn.com/projects/";
 
-// Google Font Import //
+// Base Site Setup //
 //----------------------------------
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,700italic,800);
+// $base-body-bg-color:     #ffffff;
 
-// Site Branding Colors //
-//----------------------------------
-$base-body-bg-color:      #ffffff;
-$default-color:           #C2C2C2;
+// Branding
+// $primary-accent-color:   #1B83B4;
+// $secondary-accent-color: #00A8E8;
+// $tertiary-accent-color:  #003459;
+// $default-color:          #00171F;
 
-$primary-accent-color:    #254E70;
-$secondary-accent-color:  #1B83B4;
-$tertiary-accent-color:   #ACBEA3;
+// Defaults
+// $white:     #fff;
+// $black:     #000;
+// $grey:      #333;
+// $lightgrey: #f9f9f9;
+// $darkgrey:  #222;
 
-$base-font:        'Open Sans', sans-serif;
-$base-font-size:   100%;
-$base-font-weight: 400;
-$base-font-color:  #333;
+// Typography
+// $base-font:        "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+// $base-font-size:   100%;
+// $base-font-weight: 400;
+// $base-font-color:  #333;
 
-$base-link-color:       $primary-accent-color;
-$base-link-hover-color: lighten($primary-accent-color, 5%);
+// $base-link-color:       $primary-accent-color;
+// $base-link-hover-color: lighten($primary-accent-color, 5%);
 
-$base-line-height: 1.5; // 24/16
+// $base-line-height: 1.5;
 
-$base-font-size-large: rem(18);
-$base-font-size-small: rem(12);
+// $base-font-size-large: rem(18);
+// $base-font-size-small: rem(12);
 
 // Typography //
 //----------------------------------
@@ -182,6 +187,21 @@ $base-font-size-small: rem(12);
 // $base-social-icon-hover-color:  $base-social-icon-color;
 // $base-social-line-height:       $base-social-size;
 // $base-social-brand-colors:      ('facebook' $facebook-brand-color) ('twitter' $twitter-brand-color) ('google-plus' $google-plus-brand-color) ('youtube' $youtube-brand-color) ('linkedin' $linkedin-brand-color) ('yelp' $yelp-brand-color) ('pinterest' $pinterest-brand-color);
+
+// Info Boxes //
+//----------------------------------
+// $base-info-box-defualt-bg-color:  $info-default;
+// $base-info-box-info-bg-color:     $info-info;
+// $base-info-box-success-bg-color:  $info-success;
+// $base-info-box-warning-bg-color:  $info-warning;
+// $base-info-box-error-color:       $info-error;
+
+// Info Box Setup
+// $base-info-box-class:            ".info-box";
+// $base-info-box-margin-bottom:     rem(20);
+// $base-info-box-padding:           rem(15);
+// $base-info-box-font-size:         rem(16);
+// $base-info-close-icon:            "\f00d";
 
 // Forms //
 //----------------------------------
