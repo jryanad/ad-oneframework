@@ -1,7 +1,7 @@
 // Import Site Settings
 //-----------------------------------------
 
-@import "oneframework/site-settings";
+@import "site-settings";
 
 // Import One Framework
 //-----------------------------------------
@@ -10,7 +10,6 @@
 
 // Or Import Specific Framework Components
 //@import
-// "oneframework/scss/accordion",
 // "oneframework/scss/blockquote",
 // "oneframework/scss/buttons",
 // "oneframework/scss/forms",
@@ -20,10 +19,8 @@
 // "oneframework/scss/print",
 // "oneframework/scss/reset",
 // "oneframework/scss/responsive-navigation",
-// "oneframework/scss/social-buttons",
 // "oneframework/scss/stack",
 // "oneframework/scss/tables",
-// "oneframework/scss/tabs",
 // "oneframework/scss/typography",
 // "oneframework/scss/utility-closet";
 
@@ -31,6 +28,13 @@
 //-----------------------------------------
 
 @import "oneframework-extensions/btt-button";
+@import "oneframework-extensions/social-buttons";
+@import "oneframework-extensions/accordion";
+@import "oneframework-extensions/tabs";
+
+// Add Your Project Path to CDN //
+//----------------------------------
+$cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.ssl.cf2.rackcdn.com/projects/";
 
 // Code Your App Here
 //-----------------------------------------

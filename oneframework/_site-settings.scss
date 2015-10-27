@@ -8,30 +8,29 @@
 
 // Table of Contents
 //----------------------------------
-// CDN Path
+// Font Imports
 // Site Branding
 // Typography
 // Navbar
 // Responsive Menu
 // Blockquotes
 // Buttons
-// Social Buttons
 // Info Boxes
 // Forms
 // Tables
 // Pagination
-// Accordion
-// Simple Tabs
 //----------------------------------
 // Extensions
 //----------------------------------
 // Floating Back to Top Button
+// Social Buttons
+// Accordion
+// Simple Tabs
 //----------------------------------
 
-
-// Add Your Project Path to CDN //
+// Import Custom Fonts //
 //----------------------------------
-$cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.ssl.cf2.rackcdn.com/projects/";
+// @import: import-custom-font-path-here;
 
 // Base Site Setup //
 //----------------------------------
@@ -170,24 +169,6 @@ $cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.s
 // $base-btn-styles: 'flat' 'rounded' 'pill' 'border' '3d' 'white-border';
 // $base-btn-sizes:  'small' 'medium' 'large' 'jumbo';
 
-// Social Buttons //
-//----------------------------------
-// $facebook-brand-color:          #3b5998;
-// $twitter-brand-color:           #00aced;
-// $google-plus-brand-color:       #dd4b39;
-// $youtube-brand-color:           #bb0000;
-// $linkedin-brand-color:          #007bb6;
-// $yelp-brand-color:              #B4282E;
-// $pinterest-brand-color:         #cb2027;
-
-// Social Button Build
-// $base-social-class:             ".btn-social";
-// $base-social-size:              rem(36);
-// $base-social-icon-color:        $white;
-// $base-social-icon-hover-color:  $base-social-icon-color;
-// $base-social-line-height:       $base-social-size;
-// $base-social-brand-colors:      ('facebook' $facebook-brand-color) ('twitter' $twitter-brand-color) ('google-plus' $google-plus-brand-color) ('youtube' $youtube-brand-color) ('linkedin' $linkedin-brand-color) ('yelp' $yelp-brand-color) ('pinterest' $pinterest-brand-color);
-
 // Info Boxes //
 //----------------------------------
 // $base-info-box-defualt-bg-color:  $info-default;
@@ -267,6 +248,40 @@ $cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.s
 // $base-pagination-sizing-small-line-height:         $base-line-height;
 // $base-pagination-sizing-small-border-radius:       rem(3);
 
+//----------------------------------
+// One Framework Extensions
+// These are found in the oneframework-extensions
+// directory and can be included by importing selectively
+//----------------------------------
+
+// Floating Back to Top Button //
+//----------------------------------
+// $base-bttn-button-size:      rem(40);
+// $base-bttn-right-position:   rem(40);
+// $base-bttn-bottom-position:  rem(40);
+// $base-btn-icon-color:        $white;
+// $base-bttn-bg-color:         $primary-accent-color;
+// $base-bttn-bg-hover-color:   darken($primary-accent-color, 5%);
+// $base-btn-icon-line-height:  rem(38);
+
+// Social Buttons //
+//----------------------------------
+// $facebook-brand-color:          #3b5998;
+// $twitter-brand-color:           #00aced;
+// $google-plus-brand-color:       #dd4b39;
+// $youtube-brand-color:           #bb0000;
+// $linkedin-brand-color:          #007bb6;
+// $yelp-brand-color:              #B4282E;
+// $pinterest-brand-color:         #cb2027;
+
+// Social Button Build
+// $base-social-class:             ".btn-social";
+// $base-social-size:              rem(36);
+// $base-social-icon-color:        $white;
+// $base-social-icon-hover-color:  $base-social-icon-color;
+// $base-social-line-height:       $base-social-size;
+// $base-social-brand-colors:      ('facebook' $facebook-brand-color) ('twitter' $twitter-brand-color) ('google-plus' $google-plus-brand-color) ('youtube' $youtube-brand-color) ('linkedin' $linkedin-brand-color) ('yelp' $yelp-brand-color) ('pinterest' $pinterest-brand-color);
+
 // Accordion //
 //----------------------------------
 // $base-acc-trigger-color:                 $secondary-accent-color;
@@ -304,18 +319,3 @@ $cdn-file-path: "https://88ebd614d6d385cab1fa-690979800f2b6f086ae14b7920465b0b.s
 // $base-tabs-content-padding:     rem(20);
 // $base-tabs-accent-border-color: $base-tabs-active-color;
 // $base-tabs-content-font-color:  $base-font-color;
-
-//----------------------------------
-// One Framework Extensions
-// These are found in the oneframework-extensions
-// directory and can be included by importing selectively
-//----------------------------------
-
-// Back to Top Button
-// $base-bttn-button-size:      rem(40);
-// $base-bttn-right-position:   rem(40);
-// $base-bttn-bottom-position:  rem(40);
-// $base-btn-icon-color:        $white;
-// $base-bttn-bg-color:         $primary-accent-color;
-// $base-bttn-bg-hover-color:   darken($primary-accent-color, 5%);
-// $base-btn-icon-line-height:  rem(38);
