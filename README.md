@@ -36,10 +36,18 @@ Also, there are 2 files in *Components* for tabs.js & accordion.js, just add the
 
 # Changelog
 
+#### October 27th, 2015 // 2.0.2
+
+* Refactored to be used as a Dependency within Site Builds
+* Moved Tabs, Accordion, and Social Buttons into Extensions
+* Separated out plugins for Responsive Menu & Font Resizer
+* Minified all JS
+* Renamed app.js to oneframework.js
+
 #### October 8th, 2015 // 2.0.1
 
 * Updated: Moved Social Branding vars into defaults so they can be used throughout the framework
-* Fixed: Reset min-width on unordered lists within the columns of the mega menu 
+* Fixed: Reset min-width on unordered lists within the columns of the mega menu
 
 #### October 2nd, 2015 // 2.0
 
